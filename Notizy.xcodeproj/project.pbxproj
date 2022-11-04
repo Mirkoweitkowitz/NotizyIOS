@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4006EB1528EEDDC700BEB33F /* NotizyCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4006EB1428EEDDC700BEB33F /* NotizyCollectionVC.swift */; };
+		4006EB1728EEFCAB00BEB33F /* Matrix.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4006EB1628EEFCAB00BEB33F /* Matrix.mp4 */; };
+		400DB33528FE9AFF00401566 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400DB33428FE9AFF00401566 /* LoginVC.swift */; };
+		402521E629012F7200753BEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 402521E529012F7200753BEB /* GoogleService-Info.plist */; };
+		402521E92901319D00753BEB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 402521E82901319D00753BEB /* FirebaseAnalytics */; };
+		402521EB2901319D00753BEB /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 402521EA2901319D00753BEB /* FirebaseAnalyticsSwift */; };
+		402521ED2901319D00753BEB /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 402521EC2901319D00753BEB /* FirebaseAppCheck */; };
+		402521EF2901319D00753BEB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 402521EE2901319D00753BEB /* FirebaseAuth */; };
+		402521F12901319D00753BEB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 402521F02901319D00753BEB /* FirebaseDatabaseSwift */; };
+		402521F32901319D00753BEB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 402521F22901319D00753BEB /* FirebaseFirestore */; };
+		402521F52901319D00753BEB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 402521F42901319D00753BEB /* FirebaseFirestoreSwift */; };
+		402521F72901319D00753BEB /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 402521F62901319D00753BEB /* FirebaseFunctions */; };
+		402521F92901319D00753BEB /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 402521F82901319D00753BEB /* FirebaseInAppMessagingSwift-Beta */; };
+		402521FB2901319D00753BEB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 402521FA2901319D00753BEB /* FirebaseMessaging */; };
+		402521FD2901319D00753BEB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 402521FC2901319D00753BEB /* FirebaseStorage */; };
+		40437E5128EDA3BF0058BDA2 /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40437E5028EDA3BF0058BDA2 /* models.swift */; };
+		40437E5328EDC22E0058BDA2 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 40437E5228EDC22E0058BDA2 /* video.mp4 */; };
+		4054F05028C9CB5100710F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F04F28C9CB5100710F30 /* AppDelegate.swift */; };
+		4054F05228C9CB5100710F30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F05128C9CB5100710F30 /* SceneDelegate.swift */; };
+		4054F05428C9CB5100710F30 /* NotizyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F05328C9CB5100710F30 /* NotizyCardView.swift */; };
+		4054F05728C9CB5100710F30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4054F05528C9CB5100710F30 /* Main.storyboard */; };
+		4054F05928C9CB5300710F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4054F05828C9CB5300710F30 /* Assets.xcassets */; };
+		4054F05C28C9CB5300710F30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4054F05A28C9CB5300710F30 /* LaunchScreen.storyboard */; };
+		4090C50328FED3B500CB1D96 /* ModernCellNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090C50228FED3B500CB1D96 /* ModernCellNotizyVC.swift */; };
+		4090C50528FEDBF700CB1D96 /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090C50428FEDBF700CB1D96 /* CustomTVC.swift */; };
+		4090C50728FEEF6200CB1D96 /* Notizy_to_do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */; };
+		4095547329152C0000DFB373 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */; };
+		4095547429152C0000DFB373 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */; };
+		409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AE24428FD914D00617481 /* NotizyCVC.swift */; };
+		40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40BB970228DD99DE000ECDCE /* Notizy.xcdatamodeld */; };
+		40D23BE8290165DA0056B3AF /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23BE7290165DA0056B3AF /* AccountVC.swift */; };
+		40D341EC28CB5C420044B470 /* TableNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341EB28CB5C420044B470 /* TableNotizyVC.swift */; };
+		40D341F028CB64700044B470 /* SaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341EF28CB64700044B470 /* SaveVC.swift */; };
+		40D341F228CB64800044B470 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341F128CB64800044B470 /* EditVC.swift */; };
+		40D341F428CB75BE0044B470 /* ContactTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341F328CB75BE0044B470 /* ContactTVC.swift */; };
+		40D341F628CB85410044B470 /* CollectionViewTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341F528CB85410044B470 /* CollectionViewTaskVC.swift */; };
+		40D341F828CB85760044B470 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341F728CB85760044B470 /* PictureCollectionViewCell.swift */; };
+		40DF07A628EC592C0043224A /* DedailNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07A528EC592C0043224A /* DedailNotizyVC.swift */; };
+		40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07A728EC81B40043224A /* NotizyVC.swift */; };
+		40DF07AB28EC82620043224A /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07AA28EC82620043224A /* CollectionTableViewCell.swift */; };
+		40DF07AD28EC82B00043224A /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07AC28EC82B00043224A /* TableCollectionViewCell.swift */; };
+		40E1EC3A29028397006789D2 /* FireStoreCreatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1EC3929028397006789D2 /* FireStoreCreatVC.swift */; };
+		40E1EC3C290283B8006789D2 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1EC3B290283B8006789D2 /* Ingredient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4006EB1428EEDDC700BEB33F /* NotizyCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyCollectionVC.swift; sourceTree = "<group>"; };
+		4006EB1628EEFCAB00BEB33F /* Matrix.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Matrix.mp4; sourceTree = "<group>"; };
+		400DB33428FE9AFF00401566 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		402521E529012F7200753BEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		40437E5028EDA3BF0058BDA2 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		40437E5228EDC22E0058BDA2 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		4054F04C28C9CB5100710F30 /* Notizy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notizy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4054F04F28C9CB5100710F30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4054F05128C9CB5100710F30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4054F05328C9CB5100710F30 /* NotizyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyCardView.swift; sourceTree = "<group>"; };
+		4054F05628C9CB5100710F30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4054F05828C9CB5300710F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4054F05B28C9CB5300710F30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4054F05D28C9CB5300710F30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4090C50228FED3B500CB1D96 /* ModernCellNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernCellNotizyVC.swift; sourceTree = "<group>"; };
+		4090C50428FEDBF700CB1D96 /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
+		4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notizy_to_do.rtf; sourceTree = "<group>"; };
+		4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		409AE24428FD914D00617481 /* NotizyCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyCVC.swift; sourceTree = "<group>"; };
+		40A84EEA2912A36100FB1FFF /* Treffen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Treffen.mp4; sourceTree = "<group>"; };
+		40A84EEB2912A37A00FB1FFF /* Skizzen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skizzen.mp4; sourceTree = "<group>"; };
+		40A84EEC2912A39200FB1FFF /* Skizzieren.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Skizzieren.mp4; path = "../../Swift mirko/Bilder/Skizzieren.mp4"; sourceTree = "<group>"; };
+		40BB970328DD99DE000ECDCE /* Notizy.Model.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = Notizy.Model.xcdatamodel; sourceTree = "<group>"; };
+		40D23BE7290165DA0056B3AF /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		40D341EB28CB5C420044B470 /* TableNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNotizyVC.swift; sourceTree = "<group>"; };
+		40D341EF28CB64700044B470 /* SaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVC.swift; sourceTree = "<group>"; };
+		40D341F128CB64800044B470 /* EditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
+		40D341F328CB75BE0044B470 /* ContactTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTVC.swift; sourceTree = "<group>"; };
+		40D341F528CB85410044B470 /* CollectionViewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTaskVC.swift; sourceTree = "<group>"; };
+		40D341F728CB85760044B470 /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		40DF07A528EC592C0043224A /* DedailNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedailNotizyVC.swift; sourceTree = "<group>"; };
+		40DF07A728EC81B40043224A /* NotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyVC.swift; sourceTree = "<group>"; };
+		40DF07AA28EC82620043224A /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		40DF07AC28EC82B00043224A /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
+		40E1EC3929028397006789D2 /* FireStoreCreatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreCreatVC.swift; sourceTree = "<group>"; };
+		40E1EC3B290283B8006789D2 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4054F04928C9CB5100710F30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				402521F12901319D00753BEB /* FirebaseDatabaseSwift in Frameworks */,
+				402521EB2901319D00753BEB /* FirebaseAnalyticsSwift in Frameworks */,
+				402521FB2901319D00753BEB /* FirebaseMessaging in Frameworks */,
+				402521ED2901319D00753BEB /* FirebaseAppCheck in Frameworks */,
+				402521F72901319D00753BEB /* FirebaseFunctions in Frameworks */,
+				402521F52901319D00753BEB /* FirebaseFirestoreSwift in Frameworks */,
+				402521E92901319D00753BEB /* FirebaseAnalytics in Frameworks */,
+				402521EF2901319D00753BEB /* FirebaseAuth in Frameworks */,
+				402521FD2901319D00753BEB /* FirebaseStorage in Frameworks */,
+				402521F92901319D00753BEB /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				402521F32901319D00753BEB /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		403BD5E7290044C60046A55C /* FlipCard */ = {
+			isa = PBXGroup;
+			children = (
+				40D341F528CB85410044B470 /* CollectionViewTaskVC.swift */,
+			);
+			path = FlipCard;
+			sourceTree = "<group>";
+		};
+		4054F04328C9CB5100710F30 = {
+			isa = PBXGroup;
+			children = (
+				4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */,
+				4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */,
+				4054F04E28C9CB5100710F30 /* Notizy */,
+				4054F04D28C9CB5100710F30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4054F04D28C9CB5100710F30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4054F04C28C9CB5100710F30 /* Notizy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4054F04E28C9CB5100710F30 /* Notizy */ = {
+			isa = PBXGroup;
+			children = (
+				40A6682E2913BE980096C63A /* FirebaseAuth */,
+				40E1EC3829028358006789D2 /* FireStoreCreat */,
+				403BD5E7290044C60046A55C /* FlipCard */,
+				40437E5228EDC22E0058BDA2 /* video.mp4 */,
+				4006EB1628EEFCAB00BEB33F /* Matrix.mp4 */,
+				40A84EEA2912A36100FB1FFF /* Treffen.mp4 */,
+				40A84EEB2912A37A00FB1FFF /* Skizzen.mp4 */,
+				40A84EEC2912A39200FB1FFF /* Skizzieren.mp4 */,
+				40BB971028DDA1FD000ECDCE /* Datenbank */,
+				40DF07A928EC82140043224A /* Cells */,
+				40BB970D28DDA15C000ECDCE /* Model */,
+				4054F05828C9CB5300710F30 /* Assets.xcassets */,
+				4054F05D28C9CB5300710F30 /* Info.plist */,
+				4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */,
+				402521E529012F7200753BEB /* GoogleService-Info.plist */,
+			);
+			path = Notizy;
+			sourceTree = "<group>";
+		};
+		40A6682E2913BE980096C63A /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				400DB33428FE9AFF00401566 /* LoginVC.swift */,
+				40D23BE7290165DA0056B3AF /* AccountVC.swift */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		40A6682F2914133F0096C63A /* DragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				4054F05328C9CB5100710F30 /* NotizyCardView.swift */,
+				4006EB1428EEDDC700BEB33F /* NotizyCollectionVC.swift */,
+				40DF07A528EC592C0043224A /* DedailNotizyVC.swift */,
+			);
+			path = DragAndDrop;
+			sourceTree = "<group>";
+		};
+		40A66830291413A60096C63A /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				40D341EB28CB5C420044B470 /* TableNotizyVC.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		40BB970D28DDA15C000ECDCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40437E5028EDA3BF0058BDA2 /* models.swift */,
+				40BB970228DD99DE000ECDCE /* Notizy.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40BB970E28DDA197000ECDCE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4054F05528C9CB5100710F30 /* Main.storyboard */,
+				4054F05A28C9CB5300710F30 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		40BB970F28DDA1E9000ECDCE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				40A66830291413A60096C63A /* HomeView */,
+				40A6682F2914133F0096C63A /* DragAndDrop */,
+				40DF07A728EC81B40043224A /* NotizyVC.swift */,
+				40D341F128CB64800044B470 /* EditVC.swift */,
+				40D341EF28CB64700044B470 /* SaveVC.swift */,
+				40D341F328CB75BE0044B470 /* ContactTVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		40BB971028DDA1FD000ECDCE /* Datenbank */ = {
+			isa = PBXGroup;
+			children = (
+				4054F04F28C9CB5100710F30 /* AppDelegate.swift */,
+				4054F05128C9CB5100710F30 /* SceneDelegate.swift */,
+				40BB970E28DDA197000ECDCE /* Storyboard */,
+				40BB970F28DDA1E9000ECDCE /* ViewController */,
+			);
+			path = Datenbank;
+			sourceTree = "<group>";
+		};
+		40DF07A928EC82140043224A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				40D341F728CB85760044B470 /* PictureCollectionViewCell.swift */,
+				409AE24428FD914D00617481 /* NotizyCVC.swift */,
+				40DF07AA28EC82620043224A /* CollectionTableViewCell.swift */,
+				40DF07AC28EC82B00043224A /* TableCollectionViewCell.swift */,
+				4090C50228FED3B500CB1D96 /* ModernCellNotizyVC.swift */,
+				4090C50428FEDBF700CB1D96 /* CustomTVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		40E1EC3829028358006789D2 /* FireStoreCreat */ = {
+			isa = PBXGroup;
+			children = (
+				40E1EC3929028397006789D2 /* FireStoreCreatVC.swift */,
+				40E1EC3B290283B8006789D2 /* Ingredient.swift */,
+			);
+			path = FireStoreCreat;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4054F04B28C9CB5100710F30 /* Notizy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4054F06028C9CB5300710F30 /* Build configuration list for PBXNativeTarget "Notizy" */;
+			buildPhases = (
+				4054F04828C9CB5100710F30 /* Sources */,
+				4054F04928C9CB5100710F30 /* Frameworks */,
+				4054F04A28C9CB5100710F30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notizy;
+			packageProductDependencies = (
+				402521E82901319D00753BEB /* FirebaseAnalytics */,
+				402521EA2901319D00753BEB /* FirebaseAnalyticsSwift */,
+				402521EC2901319D00753BEB /* FirebaseAppCheck */,
+				402521EE2901319D00753BEB /* FirebaseAuth */,
+				402521F02901319D00753BEB /* FirebaseDatabaseSwift */,
+				402521F22901319D00753BEB /* FirebaseFirestore */,
+				402521F42901319D00753BEB /* FirebaseFirestoreSwift */,
+				402521F62901319D00753BEB /* FirebaseFunctions */,
+				402521F82901319D00753BEB /* FirebaseInAppMessagingSwift-Beta */,
+				402521FA2901319D00753BEB /* FirebaseMessaging */,
+				402521FC2901319D00753BEB /* FirebaseStorage */,
+			);
+			productName = Notizy;
+			productReference = 4054F04C28C9CB5100710F30 /* Notizy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4054F04428C9CB5100710F30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					4054F04B28C9CB5100710F30 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 4054F04728C9CB5100710F30 /* Build configuration list for PBXProject "Notizy" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4054F04328C9CB5100710F30;
+			packageReferences = (
+				402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 4054F04D28C9CB5100710F30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4054F04B28C9CB5100710F30 /* Notizy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4054F04A28C9CB5100710F30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4054F05C28C9CB5300710F30 /* LaunchScreen.storyboard in Resources */,
+				4054F05928C9CB5300710F30 /* Assets.xcassets in Resources */,
+				4054F05728C9CB5100710F30 /* Main.storyboard in Resources */,
+				40437E5328EDC22E0058BDA2 /* video.mp4 in Resources */,
+				4006EB1728EEFCAB00BEB33F /* Matrix.mp4 in Resources */,
+				4090C50728FEEF6200CB1D96 /* Notizy_to_do.rtf in Resources */,
+				402521E629012F7200753BEB /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4054F04828C9CB5100710F30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4006EB1528EEDDC700BEB33F /* NotizyCollectionVC.swift in Sources */,
+				40D341F828CB85760044B470 /* PictureCollectionViewCell.swift in Sources */,
+				40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */,
+				40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */,
+				40D341F628CB85410044B470 /* CollectionViewTaskVC.swift in Sources */,
+				40DF07A628EC592C0043224A /* DedailNotizyVC.swift in Sources */,
+				4054F05428C9CB5100710F30 /* NotizyCardView.swift in Sources */,
+				4090C50328FED3B500CB1D96 /* ModernCellNotizyVC.swift in Sources */,
+				4095547429152C0000DFB373 /* Contact+CoreDataProperties.swift in Sources */,
+				40D23BE8290165DA0056B3AF /* AccountVC.swift in Sources */,
+				4090C50528FEDBF700CB1D96 /* CustomTVC.swift in Sources */,
+				40D341F028CB64700044B470 /* SaveVC.swift in Sources */,
+				40DF07AD28EC82B00043224A /* TableCollectionViewCell.swift in Sources */,
+				4054F05028C9CB5100710F30 /* AppDelegate.swift in Sources */,
+				40D341EC28CB5C420044B470 /* TableNotizyVC.swift in Sources */,
+				40E1EC3C290283B8006789D2 /* Ingredient.swift in Sources */,
+				40D341F428CB75BE0044B470 /* ContactTVC.swift in Sources */,
+				40DF07AB28EC82620043224A /* CollectionTableViewCell.swift in Sources */,
+				4054F05228C9CB5100710F30 /* SceneDelegate.swift in Sources */,
+				400DB33528FE9AFF00401566 /* LoginVC.swift in Sources */,
+				40E1EC3A29028397006789D2 /* FireStoreCreatVC.swift in Sources */,
+				40D341F228CB64800044B470 /* EditVC.swift in Sources */,
+				409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */,
+				4095547329152C0000DFB373 /* Contact+CoreDataClass.swift in Sources */,
+				40437E5128EDA3BF0058BDA2 /* models.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4054F05528C9CB5100710F30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4054F05628C9CB5100710F30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4054F05A28C9CB5300710F30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4054F05B28C9CB5300710F30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4054F05E28C9CB5300710F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4054F05F28C9CB5300710F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4054F06128C9CB5300710F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5CZ5QA22J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Notizy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.mirkoweitkowitz.Notizy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4054F06228C9CB5300710F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5CZ5QA22J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Notizy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.mirkoweitkowitz.Notizy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4054F04728C9CB5100710F30 /* Build configuration list for PBXProject "Notizy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4054F05E28C9CB5300710F30 /* Debug */,
+				4054F05F28C9CB5300710F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4054F06028C9CB5300710F30 /* Build configuration list for PBXNativeTarget "Notizy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4054F06128C9CB5300710F30 /* Debug */,
+				4054F06228C9CB5300710F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		402521E82901319D00753BEB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		402521EA2901319D00753BEB /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		402521EC2901319D00753BEB /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		402521EE2901319D00753BEB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		402521F02901319D00753BEB /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		402521F22901319D00753BEB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		402521F42901319D00753BEB /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		402521F62901319D00753BEB /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		402521F82901319D00753BEB /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		402521FA2901319D00753BEB /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		402521FC2901319D00753BEB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		40BB970228DD99DE000ECDCE /* Notizy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40BB970328DD99DE000ECDCE /* Notizy.Model.xcdatamodel */,
+			);
+			currentVersion = 40BB970328DD99DE000ECDCE /* Notizy.Model.xcdatamodel */;
+			path = Notizy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4054F04428C9CB5100710F30 /* Project object */;
+}
