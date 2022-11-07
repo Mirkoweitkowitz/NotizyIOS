@@ -35,6 +35,9 @@
 		4090C50728FEEF6200CB1D96 /* Notizy_to_do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */; };
 		4095547329152C0000DFB373 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */; };
 		4095547429152C0000DFB373 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */; };
+		4098AB562919394300EBBD90 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB552919394300EBBD90 /* PageViewController.swift */; };
+		4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB5A29193BF100EBBD90 /* CoreDaten.swift */; };
+		4098AB5D29193D0B00EBBD90 /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB5C29193D0B00EBBD90 /* FeatureCard.swift */; };
 		409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AE24428FD914D00617481 /* NotizyCVC.swift */; };
 		40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40BB970228DD99DE000ECDCE /* Notizy.xcdatamodeld */; };
 		40D23BE8290165DA0056B3AF /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23BE7290165DA0056B3AF /* AccountVC.swift */; };
@@ -44,6 +47,7 @@
 		40D341F428CB75BE0044B470 /* ContactTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341F328CB75BE0044B470 /* ContactTVC.swift */; };
 		40D341F628CB85410044B470 /* CollectionViewTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341F528CB85410044B470 /* CollectionViewTaskVC.swift */; };
 		40D341F828CB85760044B470 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341F728CB85760044B470 /* PictureCollectionViewCell.swift */; };
+		40DBC933291567AE00EC71E0 /* SwiftUIViewtest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBC932291567AE00EC71E0 /* SwiftUIViewtest.swift */; };
 		40DF07A628EC592C0043224A /* DedailNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07A528EC592C0043224A /* DedailNotizyVC.swift */; };
 		40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07A728EC81B40043224A /* NotizyVC.swift */; };
 		40DF07AB28EC82620043224A /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07AA28EC82620043224A /* CollectionTableViewCell.swift */; };
@@ -72,6 +76,10 @@
 		4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notizy_to_do.rtf; sourceTree = "<group>"; };
 		4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4098AB552919394300EBBD90 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		4098AB5929193A5700EBBD90 /* Skizzieren.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skizzieren.mp4; sourceTree = "<group>"; };
+		4098AB5A29193BF100EBBD90 /* CoreDaten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDaten.swift; sourceTree = "<group>"; };
+		4098AB5C29193D0B00EBBD90 /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		409AE24428FD914D00617481 /* NotizyCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyCVC.swift; sourceTree = "<group>"; };
 		40A84EEA2912A36100FB1FFF /* Treffen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Treffen.mp4; sourceTree = "<group>"; };
 		40A84EEB2912A37A00FB1FFF /* Skizzen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skizzen.mp4; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 		40D341F328CB75BE0044B470 /* ContactTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTVC.swift; sourceTree = "<group>"; };
 		40D341F528CB85410044B470 /* CollectionViewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTaskVC.swift; sourceTree = "<group>"; };
 		40D341F728CB85760044B470 /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		40DBC932291567AE00EC71E0 /* SwiftUIViewtest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewtest.swift; sourceTree = "<group>"; };
 		40DF07A528EC592C0043224A /* DedailNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DedailNotizyVC.swift; sourceTree = "<group>"; };
 		40DF07A728EC81B40043224A /* NotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyVC.swift; sourceTree = "<group>"; };
 		40DF07AA28EC82620043224A /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -127,6 +136,11 @@
 			children = (
 				4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */,
 				4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */,
+				40437E5228EDC22E0058BDA2 /* video.mp4 */,
+				4006EB1628EEFCAB00BEB33F /* Matrix.mp4 */,
+				40A84EEA2912A36100FB1FFF /* Treffen.mp4 */,
+				40A84EEB2912A37A00FB1FFF /* Skizzen.mp4 */,
+				4098AB5929193A5700EBBD90 /* Skizzieren.mp4 */,
 				4054F04E28C9CB5100710F30 /* Notizy */,
 				4054F04D28C9CB5100710F30 /* Products */,
 			);
@@ -143,23 +157,39 @@
 		4054F04E28C9CB5100710F30 /* Notizy */ = {
 			isa = PBXGroup;
 			children = (
+				40BB970E28DDA197000ECDCE /* Storyboard */,
+				4098AB57291939D600EBBD90 /* Views */,
+				40DBC9312915678800EC71E0 /* SwiftUI */,
 				40A6682E2913BE980096C63A /* FirebaseAuth */,
 				40E1EC3829028358006789D2 /* FireStoreCreat */,
 				403BD5E7290044C60046A55C /* FlipCard */,
-				40437E5228EDC22E0058BDA2 /* video.mp4 */,
-				4006EB1628EEFCAB00BEB33F /* Matrix.mp4 */,
-				40A84EEA2912A36100FB1FFF /* Treffen.mp4 */,
-				40A84EEB2912A37A00FB1FFF /* Skizzen.mp4 */,
-				40A84EEC2912A39200FB1FFF /* Skizzieren.mp4 */,
-				40BB971028DDA1FD000ECDCE /* Datenbank */,
-				40DF07A928EC82140043224A /* Cells */,
 				40BB970D28DDA15C000ECDCE /* Model */,
+				40DF07A928EC82140043224A /* Cells */,
+				40BB971028DDA1FD000ECDCE /* Datenbank */,
+				40A84EEC2912A39200FB1FFF /* Skizzieren.mp4 */,
 				4054F05828C9CB5300710F30 /* Assets.xcassets */,
 				4054F05D28C9CB5300710F30 /* Info.plist */,
 				4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */,
 				402521E529012F7200753BEB /* GoogleService-Info.plist */,
 			);
 			path = Notizy;
+			sourceTree = "<group>";
+		};
+		4098AB57291939D600EBBD90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40BB970F28DDA1E9000ECDCE /* ViewController */,
+				4098AB58291939DF00EBBD90 /* PageView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4098AB58291939DF00EBBD90 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				4098AB552919394300EBBD90 /* PageViewController.swift */,
+			);
+			path = PageView;
 			sourceTree = "<group>";
 		};
 		40A6682E2913BE980096C63A /* FirebaseAuth */ = {
@@ -225,10 +255,18 @@
 			children = (
 				4054F04F28C9CB5100710F30 /* AppDelegate.swift */,
 				4054F05128C9CB5100710F30 /* SceneDelegate.swift */,
-				40BB970E28DDA197000ECDCE /* Storyboard */,
-				40BB970F28DDA1E9000ECDCE /* ViewController */,
+				4098AB5A29193BF100EBBD90 /* CoreDaten.swift */,
 			);
 			path = Datenbank;
+			sourceTree = "<group>";
+		};
+		40DBC9312915678800EC71E0 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				40DBC932291567AE00EC71E0 /* SwiftUIViewtest.swift */,
+				4098AB5C29193D0B00EBBD90 /* FeatureCard.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		40DF07A928EC82140043224A /* Cells */ = {
@@ -346,10 +384,13 @@
 			files = (
 				4006EB1528EEDDC700BEB33F /* NotizyCollectionVC.swift in Sources */,
 				40D341F828CB85760044B470 /* PictureCollectionViewCell.swift in Sources */,
+				4098AB5D29193D0B00EBBD90 /* FeatureCard.swift in Sources */,
 				40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */,
 				40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */,
 				40D341F628CB85410044B470 /* CollectionViewTaskVC.swift in Sources */,
 				40DF07A628EC592C0043224A /* DedailNotizyVC.swift in Sources */,
+				4098AB562919394300EBBD90 /* PageViewController.swift in Sources */,
+				40DBC933291567AE00EC71E0 /* SwiftUIViewtest.swift in Sources */,
 				4054F05428C9CB5100710F30 /* NotizyCardView.swift in Sources */,
 				4090C50328FED3B500CB1D96 /* ModernCellNotizyVC.swift in Sources */,
 				4095547429152C0000DFB373 /* Contact+CoreDataProperties.swift in Sources */,
@@ -365,6 +406,7 @@
 				4054F05228C9CB5100710F30 /* SceneDelegate.swift in Sources */,
 				400DB33528FE9AFF00401566 /* LoginVC.swift in Sources */,
 				40E1EC3A29028397006789D2 /* FireStoreCreatVC.swift in Sources */,
+				4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */,
 				40D341F228CB64800044B470 /* EditVC.swift in Sources */,
 				409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */,
 				4095547329152C0000DFB373 /* Contact+CoreDataClass.swift in Sources */,

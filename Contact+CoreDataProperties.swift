@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import SwiftUI
+import CoreLocation
 import CoreData
+
 
 
 extension Contact {

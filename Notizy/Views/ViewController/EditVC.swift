@@ -33,13 +33,14 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var adressLBL: UILabel!
     
-    @IBOutlet weak var emaiTXT: UITextField!
+    @IBOutlet weak var emailTXT: UITextField!
     
     @IBOutlet weak var emailLBL: UILabel!
     
     @IBOutlet weak var notizTXTView: UITextView!
     
-    @IBOutlet weak var motizenLBL: UILabel!
+ 
+    @IBOutlet weak var notizenLBL: UILabel!
     
     @IBOutlet weak var saveButton: UIButton!
     
@@ -53,25 +54,33 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
         if nameTXT.isHidden {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(editButtonTapped(_:)))
             nameLBL.isHidden = true
-           
+            adressLBL.isHidden = true
             emailLBL.isHidden = true
+            notizenLBL.isHidden = true
             
             nameTXT.isHidden = false
-            emaiTXT.isHidden = false
+            adressTXT.isHidden = false
+            emailTXT.isHidden = false
             notizTXTView.isEditable = true
             
             nameTXT.text = nameLBL.text
-            emaiTXT.text = emailLBL.text
+            adressTXT.text = adressLBL.text
+            emailTXT.text = emailLBL.text
             
             saveButton.isHidden = false
         
         } else {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonTapped(_:)))
             nameLBL.isHidden = false
+            adressLBL.isHidden = false
             emailLBL.isHidden = false
+            notizenLBL.isHidden = false
+
             
             nameTXT.isHidden = true
-            emaiTXT.isHidden = true
+            adressTXT.isHidden = true
+            emailTXT.isHidden = true
+            
             notizTXTView.isEditable = false
             notizTXTView.text = contact.notes
             
@@ -87,7 +96,8 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     @IBAction func speichernBTN(_ sender: UIButton) {
         
         contact.name = nameTXT.text
-        contact.email = emaiTXT.text
+        contact.adress = adressTXT.text
+        contact.email = emailTXT.text
         contact.notes = notizTXTView.text
         
         delegate?.update(contact: contact, index: contactIndex)
@@ -96,13 +106,17 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonTapped(_:)))
         
         nameLBL.text = contact.name
+        adressLBL.text = contact.adress
         emailLBL.text = contact.email
         notizTXTView.text = contact.notes
         
         nameLBL.isHidden = false
+        adressLBL.isHidden = false
         emailLBL.isHidden = false
+        
         nameTXT.isHidden = true
-        emaiTXT.isHidden = true
+        adressTXT.isHidden = true
+        emailTXT.isHidden = true
         notizTXTView.isEditable = false
         saveButton.isHidden = true
         
@@ -155,6 +169,7 @@ override func viewDidLoad() {
     
     // Daten des aktuellen ContactModels anzeigen lassen
     nameLBL.text = contact.name
+    adressLBL.text = contact.adress
     emailLBL.text = contact.email
     notizTXTView.text = contact.notes
     
@@ -171,7 +186,8 @@ override func viewDidLoad() {
     
     // Delegates
     nameTXT.delegate = self
-    emaiTXT.delegate = self
+    adressTXT.delegate = self
+    emailTXT.delegate = self
     notizTXTView.delegate = self
     
     notizTXTView.inputAccessoryView = createToolbar()
