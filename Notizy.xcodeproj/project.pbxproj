@@ -39,6 +39,10 @@
 		4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB5A29193BF100EBBD90 /* CoreDaten.swift */; };
 		409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AE24428FD914D00617481 /* NotizyCVC.swift */; };
 		40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40BB970228DD99DE000ECDCE /* Notizy.xcdatamodeld */; };
+		40C40ACC291A878E00F651F9 /* FirebaseStorageUploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C40ACB291A878E00F651F9 /* FirebaseStorageUploadVC.swift */; };
+		40C40AD0291A8DC400F651F9 /* FirestoreReadDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C40ACF291A8DC400F651F9 /* FirestoreReadDetailsVC.swift */; };
+		40C40AD2291A8E1900F651F9 /* FirestoreReadMasterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C40AD1291A8E1900F651F9 /* FirestoreReadMasterTVC.swift */; };
+		40C40AD4291A8E9D00F651F9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C40AD3291A8E9D00F651F9 /* Recipe.swift */; };
 		40D23BE8290165DA0056B3AF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23BE7290165DA0056B3AF /* SignUpVC.swift */; };
 		40D341EC28CB5C420044B470 /* TableNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341EB28CB5C420044B470 /* TableNotizyVC.swift */; };
 		40D341F028CB64700044B470 /* SaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341EF28CB64700044B470 /* SaveVC.swift */; };
@@ -83,6 +87,10 @@
 		40A84EEB2912A37A00FB1FFF /* Skizzen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skizzen.mp4; sourceTree = "<group>"; };
 		40A84EEC2912A39200FB1FFF /* Skizzieren.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Skizzieren.mp4; path = "../../Swift mirko/Bilder/Skizzieren.mp4"; sourceTree = "<group>"; };
 		40BB970328DD99DE000ECDCE /* Notizy.Model.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = Notizy.Model.xcdatamodel; sourceTree = "<group>"; };
+		40C40ACB291A878E00F651F9 /* FirebaseStorageUploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageUploadVC.swift; sourceTree = "<group>"; };
+		40C40ACF291A8DC400F651F9 /* FirestoreReadDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreReadDetailsVC.swift; sourceTree = "<group>"; };
+		40C40AD1291A8E1900F651F9 /* FirestoreReadMasterTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreReadMasterTVC.swift; sourceTree = "<group>"; };
+		40C40AD3291A8E9D00F651F9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		40D23BE7290165DA0056B3AF /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		40D341EB28CB5C420044B470 /* TableNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNotizyVC.swift; sourceTree = "<group>"; };
 		40D341EF28CB64700044B470 /* SaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVC.swift; sourceTree = "<group>"; };
@@ -158,8 +166,6 @@
 				40BB970E28DDA197000ECDCE /* Storyboard */,
 				4098AB57291939D600EBBD90 /* Views */,
 				40DBC9312915678800EC71E0 /* SwiftUI */,
-				40A6682E2913BE980096C63A /* FirebaseAuth */,
-				40E1EC3829028358006789D2 /* FireStoreCreat */,
 				403BD5E7290044C60046A55C /* FlipCard */,
 				40BB970D28DDA15C000ECDCE /* Model */,
 				40DF07A928EC82140043224A /* Cells */,
@@ -231,6 +237,10 @@
 			children = (
 				4054F05528C9CB5100710F30 /* Main.storyboard */,
 				4054F05A28C9CB5300710F30 /* LaunchScreen.storyboard */,
+				40C40ACE291A8D8400F651F9 /* FirestoreRead */,
+				40A6682E2913BE980096C63A /* FirebaseAuth */,
+				40E1EC3829028358006789D2 /* FireStoreCreate */,
+				40C40ACD291A8D2F00F651F9 /* FirebaseStorage */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -258,6 +268,24 @@
 			path = Datenbank;
 			sourceTree = "<group>";
 		};
+		40C40ACD291A8D2F00F651F9 /* FirebaseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				40C40ACB291A878E00F651F9 /* FirebaseStorageUploadVC.swift */,
+			);
+			path = FirebaseStorage;
+			sourceTree = "<group>";
+		};
+		40C40ACE291A8D8400F651F9 /* FirestoreRead */ = {
+			isa = PBXGroup;
+			children = (
+				40C40ACF291A8DC400F651F9 /* FirestoreReadDetailsVC.swift */,
+				40C40AD1291A8E1900F651F9 /* FirestoreReadMasterTVC.swift */,
+				40C40AD3291A8E9D00F651F9 /* Recipe.swift */,
+			);
+			path = FirestoreRead;
+			sourceTree = "<group>";
+		};
 		40DBC9312915678800EC71E0 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,13 +307,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		40E1EC3829028358006789D2 /* FireStoreCreat */ = {
+		40E1EC3829028358006789D2 /* FireStoreCreate */ = {
 			isa = PBXGroup;
 			children = (
 				40E1EC3929028397006789D2 /* FireStoreCreatVC.swift */,
 				40E1EC3B290283B8006789D2 /* Ingredient.swift */,
 			);
-			path = FireStoreCreat;
+			path = FireStoreCreate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,17 +424,21 @@
 				40DF07AD28EC82B00043224A /* TableCollectionViewCell.swift in Sources */,
 				4054F05028C9CB5100710F30 /* AppDelegate.swift in Sources */,
 				40D341EC28CB5C420044B470 /* TableNotizyVC.swift in Sources */,
+				40C40AD0291A8DC400F651F9 /* FirestoreReadDetailsVC.swift in Sources */,
 				40E1EC3C290283B8006789D2 /* Ingredient.swift in Sources */,
 				40D341F428CB75BE0044B470 /* ContactTVC.swift in Sources */,
 				40DF07AB28EC82620043224A /* CollectionTableViewCell.swift in Sources */,
 				4054F05228C9CB5100710F30 /* SceneDelegate.swift in Sources */,
+				40C40AD2291A8E1900F651F9 /* FirestoreReadMasterTVC.swift in Sources */,
 				400DB33528FE9AFF00401566 /* LoginVC.swift in Sources */,
+				40C40ACC291A878E00F651F9 /* FirebaseStorageUploadVC.swift in Sources */,
 				40E1EC3A29028397006789D2 /* FireStoreCreatVC.swift in Sources */,
 				4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */,
 				40D341F228CB64800044B470 /* EditVC.swift in Sources */,
 				409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */,
 				4095547329152C0000DFB373 /* Contact+CoreDataClass.swift in Sources */,
 				40437E5128EDA3BF0058BDA2 /* models.swift in Sources */,
+				40C40AD4291A8E9D00F651F9 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

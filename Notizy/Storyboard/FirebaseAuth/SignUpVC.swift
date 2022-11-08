@@ -98,6 +98,7 @@ class SignUpVC: UIViewController {
         
         let alertController = UIAlertController(title: withTitle, message: andMessage, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
+       
         
         self.present(alertController, animated: true)
         

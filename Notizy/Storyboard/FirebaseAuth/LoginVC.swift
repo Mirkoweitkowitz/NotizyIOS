@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 import LocalAuthentication
 
 
@@ -22,7 +23,37 @@ class LoginVC: UIViewController {
         
     }
     
+    //MARK: viewDidAppear = Wenn View (UI) angezeigt wird
+    override func viewDidAppear(_ animated: Bool) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("Kein User aktuell")
+            return
+        }
+        
+        if !uid.isEmpty {
+            print("\(uid)")
+            performSegue(withIdentifier: "loginSuccessful", sender: nil)
+        }
+    }
+    
     @IBAction func logging(_ sender: UIButton) {
+        
+        let email = emailTF.text!
+        let password = passwordTF.text!
+        
+        if !email.isEmpty && !password.isEmpty {
+            
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                
+                if error != nil {
+                    print("Etwas ist schiefgelaufen beim Login")
+                } else {
+                    self.performSegue(withIdentifier: "loginSuccessful", sender: nil)
+                }
+                
+            }
+            
+        }
         
         let context = LAContext()
         
@@ -43,7 +74,7 @@ class LoginVC: UIViewController {
                         tabBarController?.tabBar.items![4].image = 
                         UIImage(systemName: "brain.head.profile")
 
-                      performSegue(withIdentifier: "login", sender: self )
+                      performSegue(withIdentifier: "loginSuccessful", sender: self )
                     }
                 } else {
                     DispatchQueue.main.async { [unowned self] in
