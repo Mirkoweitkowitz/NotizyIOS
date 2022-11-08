@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class AccountVC: UIViewController {
+class SignUpVC: UIViewController {
     
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -25,12 +25,12 @@ class AccountVC: UIViewController {
     
     
     @IBAction func signUpBtnTapped(_sender: UIButton) {
-        sigUp()
+        signUp()
         
     }
     
     
-    func sigUp() {
+    func signUp() {
         
         var validated = false
         

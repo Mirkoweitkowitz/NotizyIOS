@@ -37,10 +37,9 @@
 		4095547429152C0000DFB373 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */; };
 		4098AB562919394300EBBD90 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB552919394300EBBD90 /* PageViewController.swift */; };
 		4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB5A29193BF100EBBD90 /* CoreDaten.swift */; };
-		4098AB5D29193D0B00EBBD90 /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB5C29193D0B00EBBD90 /* FeatureCard.swift */; };
 		409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AE24428FD914D00617481 /* NotizyCVC.swift */; };
 		40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40BB970228DD99DE000ECDCE /* Notizy.xcdatamodeld */; };
-		40D23BE8290165DA0056B3AF /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23BE7290165DA0056B3AF /* AccountVC.swift */; };
+		40D23BE8290165DA0056B3AF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23BE7290165DA0056B3AF /* SignUpVC.swift */; };
 		40D341EC28CB5C420044B470 /* TableNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341EB28CB5C420044B470 /* TableNotizyVC.swift */; };
 		40D341F028CB64700044B470 /* SaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341EF28CB64700044B470 /* SaveVC.swift */; };
 		40D341F228CB64800044B470 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341F128CB64800044B470 /* EditVC.swift */; };
@@ -79,13 +78,12 @@
 		4098AB552919394300EBBD90 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		4098AB5929193A5700EBBD90 /* Skizzieren.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skizzieren.mp4; sourceTree = "<group>"; };
 		4098AB5A29193BF100EBBD90 /* CoreDaten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDaten.swift; sourceTree = "<group>"; };
-		4098AB5C29193D0B00EBBD90 /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		409AE24428FD914D00617481 /* NotizyCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyCVC.swift; sourceTree = "<group>"; };
 		40A84EEA2912A36100FB1FFF /* Treffen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Treffen.mp4; sourceTree = "<group>"; };
 		40A84EEB2912A37A00FB1FFF /* Skizzen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skizzen.mp4; sourceTree = "<group>"; };
 		40A84EEC2912A39200FB1FFF /* Skizzieren.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Skizzieren.mp4; path = "../../Swift mirko/Bilder/Skizzieren.mp4"; sourceTree = "<group>"; };
 		40BB970328DD99DE000ECDCE /* Notizy.Model.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = Notizy.Model.xcdatamodel; sourceTree = "<group>"; };
-		40D23BE7290165DA0056B3AF /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		40D23BE7290165DA0056B3AF /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		40D341EB28CB5C420044B470 /* TableNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNotizyVC.swift; sourceTree = "<group>"; };
 		40D341EF28CB64700044B470 /* SaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVC.swift; sourceTree = "<group>"; };
 		40D341F128CB64800044B470 /* EditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
@@ -196,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				400DB33428FE9AFF00401566 /* LoginVC.swift */,
-				40D23BE7290165DA0056B3AF /* AccountVC.swift */,
+				40D23BE7290165DA0056B3AF /* SignUpVC.swift */,
 			);
 			path = FirebaseAuth;
 			sourceTree = "<group>";
@@ -264,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				40DBC932291567AE00EC71E0 /* SwiftUIViewtest.swift */,
-				4098AB5C29193D0B00EBBD90 /* FeatureCard.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -384,7 +381,6 @@
 			files = (
 				4006EB1528EEDDC700BEB33F /* NotizyCollectionVC.swift in Sources */,
 				40D341F828CB85760044B470 /* PictureCollectionViewCell.swift in Sources */,
-				4098AB5D29193D0B00EBBD90 /* FeatureCard.swift in Sources */,
 				40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */,
 				40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */,
 				40D341F628CB85410044B470 /* CollectionViewTaskVC.swift in Sources */,
@@ -394,7 +390,7 @@
 				4054F05428C9CB5100710F30 /* NotizyCardView.swift in Sources */,
 				4090C50328FED3B500CB1D96 /* ModernCellNotizyVC.swift in Sources */,
 				4095547429152C0000DFB373 /* Contact+CoreDataProperties.swift in Sources */,
-				40D23BE8290165DA0056B3AF /* AccountVC.swift in Sources */,
+				40D23BE8290165DA0056B3AF /* SignUpVC.swift in Sources */,
 				4090C50528FEDBF700CB1D96 /* CustomTVC.swift in Sources */,
 				40D341F028CB64700044B470 /* SaveVC.swift in Sources */,
 				40DF07AD28EC82B00043224A /* TableCollectionViewCell.swift in Sources */,
