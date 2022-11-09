@@ -24,10 +24,13 @@ class TableNotizyVC: UIViewController {
         homeView.layer.shadowOffset = .zero
         homeView.layer.shadowOpacity = 0.5
         homeView.layer.shadowRadius = 20
+       
         
 //        HomeImage einstellung
         
         imageHome.layer.cornerRadius = 15
+        imageHome.layer.borderWidth = 3
+        imageHome.layer.borderColor = UIColor.green.cgColor
 
     }
     

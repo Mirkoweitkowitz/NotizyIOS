@@ -23,18 +23,18 @@ class LoginVC: UIViewController {
         
     }
     
-    //MARK: viewDidAppear = Wenn View (UI) angezeigt wird
-    override func viewDidAppear(_ animated: Bool) {
-        guard let uid = Auth.auth().currentUser?.uid else {
-            print("Kein User aktuell")
-            return
-        }
-        
-        if !uid.isEmpty {
-            print("\(uid)")
-            performSegue(withIdentifier: "loginSuccessful", sender: nil)
-        }
-    }
+//    //MARK: viewDidAppear = Wenn View (UI) angezeigt wird
+//    override func viewDidAppear(_ animated: Bool) {
+//        guard let uid = Auth.auth().currentUser?.uid else {
+//            print("Kein User aktuell")
+//            return
+//        }
+//
+//        if !uid.isEmpty {
+//            print("\(uid)")
+//            performSegue(withIdentifier: "loginSuccessful", sender: nil)
+//        }
+//    }
     
     @IBAction func logging(_ sender: UIButton) {
         
