@@ -10,7 +10,7 @@ import FirebaseAuth
 import LocalAuthentication
 
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var emailTF: UITextField!
@@ -20,7 +20,14 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTF.delegate = self
+        passwordTF.delegate = self
         
+    
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
     
 //    //MARK: viewDidAppear = Wenn View (UI) angezeigt wird
@@ -35,6 +42,7 @@ class LoginVC: UIViewController {
 //            performSegue(withIdentifier: "loginSuccessful", sender: nil)
 //        }
 //    }
+    
     
     @IBAction func logging(_ sender: UIButton) {
         

@@ -129,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400D1032291CFF14004DCBBE /* Ausgelagert */ = {
+			isa = PBXGroup;
+			children = (
+				40E1EC3829028358006789D2 /* FireStoreCreate */,
+				40C40ACE291A8D8400F651F9 /* FirestoreRead */,
+			);
+			path = Ausgelagert;
+			sourceTree = "<group>";
+		};
 		403BD5E7290044C60046A55C /* FlipCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +172,7 @@
 		4054F04E28C9CB5100710F30 /* Notizy */ = {
 			isa = PBXGroup;
 			children = (
+				400D1032291CFF14004DCBBE /* Ausgelagert */,
 				40BB970E28DDA197000ECDCE /* Storyboard */,
 				4098AB57291939D600EBBD90 /* Views */,
 				40DBC9312915678800EC71E0 /* SwiftUI */,
@@ -237,9 +247,7 @@
 			children = (
 				4054F05528C9CB5100710F30 /* Main.storyboard */,
 				4054F05A28C9CB5300710F30 /* LaunchScreen.storyboard */,
-				40C40ACE291A8D8400F651F9 /* FirestoreRead */,
 				40A6682E2913BE980096C63A /* FirebaseAuth */,
-				40E1EC3829028358006789D2 /* FireStoreCreate */,
 				40C40ACD291A8D2F00F651F9 /* FirebaseStorage */,
 			);
 			path = Storyboard;

@@ -9,7 +9,7 @@ import UIKit
 import FirebaseStorage
 import FirebaseFirestore
 
-class FirebaseStorageUploadVC: UIViewController {
+class FirebaseStorageUploadVC: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var imgView: UIImageView!
@@ -19,7 +19,13 @@ class FirebaseStorageUploadVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        nameThisImgTF.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
     @IBAction func uploadImgBtnTapped(_ sender: UIButton) {
         
@@ -31,6 +37,7 @@ class FirebaseStorageUploadVC: UIViewController {
         
         // Bild in Data umwandeln
         guard let imageData = imgView.image?.pngData() else { return }
+        
         //guard let imageDataJpeg = imgView.image?.jpegData(compressionQuality: 1.0) else { return }
         
         // File Path festlegen
@@ -40,15 +47,17 @@ class FirebaseStorageUploadVC: UIViewController {
         
         // Daten hochladen
         let uploadTask = fileRef.putData(imageData) { metadata, error in
-            
-            if error == nil {
-                
+                        if error == nil {
+                            print("test dragon")
+
                 let db = Firestore.firestore()
                 db.collection("images").document().setData([
                     "url": path
                 
                 ])
-            }
+                        }else {
+                            print(error)
+                        }
             
         }
         

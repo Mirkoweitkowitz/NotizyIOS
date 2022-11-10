@@ -8,6 +8,8 @@
 import UIKit
 import VisionKit
 import FirebaseAuth
+import FirebaseStorage
+import FirebaseFirestore
 
 class TableNotizyVC: UIViewController {
     
@@ -57,6 +59,37 @@ extension TableNotizyVC:VNDocumentCameraViewControllerDelegate{
         for pageNumber in 0..<scan.pageCount{
             let image = scan.imageOfPage(at:pageNumber)
             print(image)
+            
+            
+            
+            // Referenz zum Storage
+            let storageRef = Storage.storage().reference()
+            
+            // Bild in Data umwandeln
+            guard let imageData = image.pngData() else { return }
+            
+            //guard let imageDataJpeg = imgView.image?.jpegData(compressionQuality: 1.0) else { return }
+            
+            // File Path festlegen
+            //let path = "images/\(nameThisImgTF.text!).png"
+            let path = "images/\(UUID().uuidString).png"
+            let fileRef = storageRef.child(path)
+            
+            // Daten hochladen
+            let uploadTask = fileRef.putData(imageData) { metadata, error in
+                            if error == nil {
+                                print("test dragon")
+
+                    let db = Firestore.firestore()
+                    db.collection("images").document().setData([
+                        "url": path
+                    
+                    ])
+                            }else {
+                                print(error)
+                            }
+                
+            }
         }
         
         controller.dismiss(animated: true, completion: nil)
