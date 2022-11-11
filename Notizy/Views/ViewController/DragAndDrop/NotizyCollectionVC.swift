@@ -72,7 +72,7 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
     //    MARK: - Video im Header einbetten
         
         private func createTableHeader() -> UIView? {
-            guard let path = Bundle.main.path(forResource: "Matrix",
+            guard let path = Bundle.main.path(forResource: "Skizzen",
                                               ofType: "mp4") else {
                 return nil
             }

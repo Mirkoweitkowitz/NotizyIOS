@@ -15,19 +15,29 @@ import FirebaseFirestore
 class NotizyCardView: UIViewController {
  
   
+    @IBOutlet weak var scanCollectionView: UICollectionView!
     
+    @IBOutlet weak var cameraButton: UIButton!
     
     @IBOutlet weak var ScanView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
+        
+        scanCollectionView.delegate = self
+        scanCollectionView.dataSource = self
+        
+        cameraButton.layer.cornerRadius = 20
+        cameraButton.layer.shadowColor = UIColor.black.cgColor
+        cameraButton.layer.shadowRadius = 25
+        cameraButton.layer.shadowOffset = .zero
+        cameraButton.layer.shadowOpacity = 1
         
     }
 
     @IBAction func touchUpInsideCameraButton(_ sender: Any) {
-        
+        print("Test")
         configureDocumentView()
     }
     
@@ -36,6 +46,7 @@ class NotizyCardView: UIViewController {
         scanningDocumentVC.delegate = self
         self.present(scanningDocumentVC, animated: true, completion: nil)
     }
+    
     
     
 }
@@ -86,5 +97,20 @@ extension NotizyCardView:VNDocumentCameraViewControllerDelegate{
         controller.dismiss(animated: true, completion: nil)
         
     }
+}
+
+extension NotizyCardView: UICollectionViewDelegate,UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scanImg", for: indexPath) as! ScanCVC
+        cell.previewImg.image = UIImage(named: "syntax1")
+        return cell
+    }
+    
+    
+    
 }
 

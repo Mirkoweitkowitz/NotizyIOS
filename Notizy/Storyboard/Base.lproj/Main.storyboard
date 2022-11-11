@@ -72,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-BN-hVb">
-                                <rect key="frame" x="-18" y="0.0" width="364" height="44"/>
+                                <rect key="frame" x="-18" y="0.0" width="363" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="x8V-N1-BM0">
@@ -420,14 +420,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bowser_Stock_Art_2021" translatesAutoresizingMaskIntoConstraints="NO" id="Kny-eC-1p4">
-                                <rect key="frame" x="62" y="86" width="251" height="168"/>
+                                <rect key="frame" x="62" y="130" width="251" height="168"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="251" id="AmG-4I-DUv"/>
                                     <constraint firstAttribute="height" constant="168" id="IcR-L1-T5f"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Benenne das Bild..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="72t-d4-dfw">
-                                <rect key="frame" x="62" y="389" width="251" height="34"/>
+                                <rect key="frame" x="62" y="433" width="251" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="251" id="URb-0k-P1U"/>
                                     <constraint firstAttribute="height" constant="34" id="mRf-my-Rcb"/>
@@ -436,7 +436,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNj-hv-5sK">
-                                <rect key="frame" x="62" y="535" width="251" height="35"/>
+                                <rect key="frame" x="62" y="579" width="251" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="251" id="JLG-xF-gDP"/>
                                     <constraint firstAttribute="height" constant="35" id="lNd-GA-qSd"/>
@@ -666,7 +666,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="TxU-Nq-vR4">
-                                <rect key="frame" x="-574.66666666666663" y="106" width="1524.3333333333333" height="128"/>
+                                <rect key="frame" x="-574.66666666666663" y="106" width="1524.333333333333" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1524.3299999999999" id="5hR-MY-H1f"/>
                                     <constraint firstAttribute="height" constant="128" id="JNK-br-MIO"/>
@@ -1086,6 +1086,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="W5V-nR-hIv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="U9t-wd-www"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OnS-u7-1Oc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8OU-da-49Y">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1118,18 +1119,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bildschirmfoto 2022-08-19 um 10.46.36" translatesAutoresizingMaskIntoConstraints="NO" id="DEi-YF-9iv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Auf-Vc-a7A">
-                                <rect key="frame" x="16" y="99" width="144" height="138"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="144" id="IHr-Lc-3eS"/>
-                                    <constraint firstAttribute="height" constant="138" id="wUJ-Gl-Lp2"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbx-2u-IgK">
-                                <rect key="frame" x="70" y="695" width="228" height="35"/>
+                                <rect key="frame" x="70" y="645" width="228" height="35"/>
+                                <color key="backgroundColor" red="0.3947068453" green="1" blue="0.40024748440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Sgt-Zd-M8y"/>
-                                    <constraint firstAttribute="width" constant="228" id="XqF-TA-FGP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="XqF-TA-FGP"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
@@ -1137,17 +1132,69 @@
                                     <action selector="touchUpInsideCameraButton:" destination="wyn-sG-88e" eventType="touchUpInside" id="hcF-Gv-Fee"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l7W-8h-fuv">
+                                <rect key="frame" x="0.0" y="245" width="375" height="378"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="378" id="YcK-un-Uag"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5ze-2h-fGD">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="scanImg" id="zJU-KE-j6L" customClass="ScanCVC" customModule="Notizy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="x1G-zN-dLQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bildschirmfoto 2022-08-19 um 10.46.54" translatesAutoresizingMaskIntoConstraints="NO" id="hHB-Af-BiH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="IUh-ct-z6R"/>
+                                                        <constraint firstAttribute="width" constant="128" id="WEF-bZ-A9C"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hHB-Af-BiH" secondAttribute="trailing" id="Yil-hp-iEv"/>
+                                                <constraint firstItem="hHB-Af-BiH" firstAttribute="top" secondItem="x1G-zN-dLQ" secondAttribute="top" id="aVz-q4-grQ"/>
+                                                <constraint firstItem="hHB-Af-BiH" firstAttribute="leading" secondItem="x1G-zN-dLQ" secondAttribute="leading" id="lBj-HD-pOZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="hHB-Af-BiH" secondAttribute="bottom" id="pqV-fk-Y1a"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="previewImg" destination="hHB-Af-BiH" id="vJ8-db-GMJ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Auf-Vc-a7A">
+                                <rect key="frame" x="123" y="99" width="144" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="IHr-Lc-3eS"/>
+                                    <constraint firstAttribute="height" constant="138" id="wUJ-Gl-Lp2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Auf-Vc-a7A" firstAttribute="leading" secondItem="x08-Kj-tnv" secondAttribute="leading" constant="123" id="1FS-c5-8UB"/>
                             <constraint firstItem="DEi-YF-9iv" firstAttribute="trailing" secondItem="x08-Kj-tnv" secondAttribute="trailing" id="5Lj-PA-6ms"/>
-                            <constraint firstItem="Auf-Vc-a7A" firstAttribute="leading" secondItem="x08-Kj-tnv" secondAttribute="leadingMargin" id="BL4-WQ-Gsb"/>
-                            <constraint firstItem="lbx-2u-IgK" firstAttribute="leading" secondItem="x08-Kj-tnv" secondAttribute="leading" constant="70" id="CGz-YY-81S"/>
+                            <constraint firstItem="lbx-2u-IgK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x08-Kj-tnv" secondAttribute="leading" constant="20" symbolic="YES" id="CGz-YY-81S"/>
+                            <constraint firstAttribute="trailing" secondItem="l7W-8h-fuv" secondAttribute="trailing" id="IqC-gh-RIx"/>
                             <constraint firstAttribute="bottom" secondItem="DEi-YF-9iv" secondAttribute="bottom" id="K5o-Kl-FXi"/>
+                            <constraint firstItem="l7W-8h-fuv" firstAttribute="leading" secondItem="x08-Kj-tnv" secondAttribute="leading" id="RGx-WN-r51"/>
                             <constraint firstItem="DEi-YF-9iv" firstAttribute="top" secondItem="x08-Kj-tnv" secondAttribute="top" id="SfA-Uv-lJo"/>
-                            <constraint firstAttribute="bottom" secondItem="lbx-2u-IgK" secondAttribute="bottom" constant="82" id="mBB-zC-n6w"/>
+                            <constraint firstAttribute="trailing" secondItem="lbx-2u-IgK" secondAttribute="trailing" constant="77" id="b2q-V1-3Pa"/>
                             <constraint firstItem="Auf-Vc-a7A" firstAttribute="top" secondItem="x08-Kj-tnv" secondAttribute="topMargin" constant="8" id="wH3-6D-zLG"/>
+                            <constraint firstItem="lbx-2u-IgK" firstAttribute="top" secondItem="l7W-8h-fuv" secondAttribute="bottom" constant="22" id="ySj-c8-723"/>
                             <constraint firstItem="DEi-YF-9iv" firstAttribute="leading" secondItem="x08-Kj-tnv" secondAttribute="leading" id="yTb-XX-RLt"/>
+                            <constraint firstItem="lbx-2u-IgK" firstAttribute="bottom" secondItem="x08-Kj-tnv" secondAttribute="bottomMargin" id="zOu-bj-zTS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1VZ-5p-sY4">
@@ -1155,11 +1202,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ScanView" destination="Auf-Vc-a7A" id="QkV-Yo-2xz"/>
+                        <outlet property="cameraButton" destination="lbx-2u-IgK" id="I44-32-qRK"/>
+                        <outlet property="scanCollectionView" destination="l7W-8h-fuv" id="j5B-Qc-8st"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tP-76-Heq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965.60000000000002" y="-1857.6354679802957"/>
+            <point key="canvasLocation" x="989.60000000000002" y="-1858.3743842364534"/>
         </scene>
         <!--Fire Store CreatVC-->
         <scene sceneID="12k-mZ-buJ">
@@ -1439,6 +1488,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bildschirmfoto 2022-08-19 um 10.46.36" width="1074" height="1162"/>
+        <image name="Bildschirmfoto 2022-08-19 um 10.46.54" width="1294" height="1342"/>
         <image name="Bildschirmfoto 2022-09-16 um 10.35.55" width="379" height="508"/>
         <image name="Bowser_Stock_Art_2021" width="315" height="315"/>
         <image name="Notizy" width="1952" height="2920"/>

@@ -56,7 +56,7 @@ class NotizyVC: UIViewController {
 //    MARK: - Video im Header einbetten
     
     private func createTableHeader() -> UIView? {
-        guard let path = Bundle.main.path(forResource: "Matrix",
+        guard let path = Bundle.main.path(forResource: "skizzen",
                                           ofType: "mp4") else {
             return nil
         }
