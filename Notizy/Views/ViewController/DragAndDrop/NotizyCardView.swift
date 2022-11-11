@@ -10,6 +10,7 @@ import VisionKit
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseFirestore
+import SDWebImage
 
 
 class NotizyCardView: UIViewController {
@@ -107,6 +108,17 @@ extension NotizyCardView: UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scanImg", for: indexPath) as! ScanCVC
         cell.previewImg.image = UIImage(named: "syntax1")
+        let ref = Storage.storage().reference(forURL: "gs://notizy-7ec84.appspot.com/images/125BF47C-4FF6-4961-8A5A-6B40F728F220.png")
+
+        
+        ref.getData(maxSize: 1 * 2500 * 2500) { result in
+          switch result {
+          case let .success(data):
+              cell.previewImg.image = UIImage(data: data)
+          case let .failure(error):
+            print("Error: Image could not download! \(error)")
+          }
+        }
         return cell
     }
     
@@ -114,3 +126,7 @@ extension NotizyCardView: UICollectionViewDelegate,UICollectionViewDataSource {
     
 }
 
+
+//let imageView = SDAnimatedImageView()
+//let animatedImage = SDAnimatedImage(named: "image.gif")
+//imageView.image = animatedImage

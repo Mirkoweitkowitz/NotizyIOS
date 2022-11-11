@@ -22,6 +22,8 @@
 		402521F92901319D00753BEB /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 402521F82901319D00753BEB /* FirebaseInAppMessagingSwift-Beta */; };
 		402521FB2901319D00753BEB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 402521FA2901319D00753BEB /* FirebaseMessaging */; };
 		402521FD2901319D00753BEB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 402521FC2901319D00753BEB /* FirebaseStorage */; };
+		402CF182291E9A0B0040C35F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 402CF181291E9A0B0040C35F /* SDWebImage */; };
+		402CF184291E9A0B0040C35F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 402CF183291E9A0B0040C35F /* SDWebImageMapKit */; };
 		403E310E291E5830005A7A62 /* ScanCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403E310D291E5830005A7A62 /* ScanCVC.swift */; };
 		403E3110291E5D74005A7A62 /* skizzen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 403E310F291E5D74005A7A62 /* skizzen.mp4 */; };
 		403E3113291E79BC005A7A62 /* ScalingHeaderScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 403E3112291E79BC005A7A62 /* ScalingHeaderScrollView */; };
@@ -61,6 +63,7 @@
 		40DF07AD28EC82B00043224A /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07AC28EC82B00043224A /* TableCollectionViewCell.swift */; };
 		40E1EC3A29028397006789D2 /* FireStoreCreatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1EC3929028397006789D2 /* FireStoreCreatVC.swift */; };
 		40E1EC3C290283B8006789D2 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1EC3B290283B8006789D2 /* Ingredient.swift */; };
+		40F4BB91291EAA6200965E1B /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 40F4BB90291EAA6200965E1B /* PopupView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,11 +127,14 @@
 				402521F52901319D00753BEB /* FirebaseFirestoreSwift in Frameworks */,
 				402521E92901319D00753BEB /* FirebaseAnalytics in Frameworks */,
 				402521EF2901319D00753BEB /* FirebaseAuth in Frameworks */,
+				40F4BB91291EAA6200965E1B /* PopupView in Frameworks */,
 				402521FD2901319D00753BEB /* FirebaseStorage in Frameworks */,
+				402CF182291E9A0B0040C35F /* SDWebImage in Frameworks */,
 				402521F92901319D00753BEB /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				402521F32901319D00753BEB /* FirebaseFirestore in Frameworks */,
 				403E3113291E79BC005A7A62 /* ScalingHeaderScrollView in Frameworks */,
 				403E3116291E7A14005A7A62 /* Alamofire in Frameworks */,
+				402CF184291E9A0B0040C35F /* SDWebImageMapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +170,7 @@
 				4098AB5929193A5700EBBD90 /* Skizzieren.mp4 */,
 				4054F04E28C9CB5100710F30 /* Notizy */,
 				4054F04D28C9CB5100710F30 /* Products */,
+				D9E94AC73B1A490EFD9E3316 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,6 +337,13 @@
 			path = FireStoreCreate;
 			sourceTree = "<group>";
 		};
+		D9E94AC73B1A490EFD9E3316 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,6 +374,9 @@
 				402521FC2901319D00753BEB /* FirebaseStorage */,
 				403E3112291E79BC005A7A62 /* ScalingHeaderScrollView */,
 				403E3115291E7A14005A7A62 /* Alamofire */,
+				402CF181291E9A0B0040C35F /* SDWebImage */,
+				402CF183291E9A0B0040C35F /* SDWebImageMapKit */,
+				40F4BB90291EAA6200965E1B /* PopupView */,
 			);
 			productName = Notizy;
 			productReference = 4054F04C28C9CB5100710F30 /* Notizy.app */;
@@ -393,6 +410,8 @@
 				402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				403E3111291E79BC005A7A62 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */,
 				403E3114291E7A14005A7A62 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				402CF180291E9A0B0040C35F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				40F4BB8F291EAA6200965E1B /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = 4054F04D28C9CB5100710F30 /* Products */;
 			projectDirPath = "";
@@ -686,6 +705,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		402CF180291E9A0B0040C35F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		403E3111291E79BC005A7A62 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/ScalingHeaderScrollView.git";
@@ -700,6 +727,14 @@
 			requirement = {
 				branch = master;
 				kind = branch;
+			};
+		};
+		40F4BB8F291EAA6200965E1B /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -760,6 +795,16 @@
 			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
+		402CF181291E9A0B0040C35F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402CF180291E9A0B0040C35F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		402CF183291E9A0B0040C35F /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 402CF180291E9A0B0040C35F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		403E3112291E79BC005A7A62 /* ScalingHeaderScrollView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 403E3111291E79BC005A7A62 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */;
@@ -769,6 +814,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 403E3114291E7A14005A7A62 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		40F4BB90291EAA6200965E1B /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40F4BB8F291EAA6200965E1B /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
 		};
 /* End XCSwiftPackageProductDependency section */
 
