@@ -22,6 +22,9 @@ class NotizyCardView: UIViewController {
     
     @IBOutlet weak var ScanView: UIImageView!
     
+    
+//    MARK: - Images
+    var imagePath = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,6 +37,21 @@ class NotizyCardView: UIViewController {
         cameraButton.layer.shadowRadius = 25
         cameraButton.layer.shadowOffset = .zero
         cameraButton.layer.shadowOpacity = 1
+        
+        let storageRef = Storage.storage().reference(withPath: "images").listAll { data, error  in
+            if data != nil {
+                
+                for item in data!.items{
+                    self.imagePath.append(item.fullPath)
+                  print(item.fullPath)
+                }
+                self.scanCollectionView.reloadData()
+                
+            }
+        }
+        
+      
+        
         
     }
 
@@ -102,13 +120,13 @@ extension NotizyCardView:VNDocumentCameraViewControllerDelegate{
 
 extension NotizyCardView: UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return imagePath.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scanImg", for: indexPath) as! ScanCVC
         cell.previewImg.image = UIImage(named: "syntax1")
-        let ref = Storage.storage().reference(forURL: "gs://notizy-7ec84.appspot.com/images/125BF47C-4FF6-4961-8A5A-6B40F728F220.png")
+        let ref = Storage.storage().reference(withPath:  self.imagePath[indexPath.row])
 
         
         ref.getData(maxSize: 1 * 2500 * 2500) { result in

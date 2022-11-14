@@ -23,6 +23,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         emailTF.delegate = self
         passwordTF.delegate = self
         
+        guard let uid = Auth.auth().currentUser?.uid else {
+              return print("no current user!")
+            }
+            if !uid.isEmpty{
+              print("USER: \(uid)")
+              faceId()
+            }
+        
     
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -63,6 +71,19 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             
         }
         
+     
+    }
+    
+    func showMessage(title: String?, message: String?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+       
+    }
+    func faceId (){
         let context = LAContext()
         
         context.localizedCancelTitle = "Cancel"
@@ -79,7 +100,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                         
                         tabBarItem.title = "Account"
                         tabBarController?.tabBar.items![4].title = "Account"
-                        tabBarController?.tabBar.items![4].image = 
+                        tabBarController?.tabBar.items![4].image =
                         UIImage(systemName: "brain.head.profile")
 
                       performSegue(withIdentifier: "loginSuccessful", sender: self )
@@ -95,16 +116,5 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             showMessage(title: "Failed", message: error?.localizedDescription)
         }
     }
-    
-    func showMessage(title: String?, message: String?) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
-        
-        
-       
-    }
-    
     
 }
