@@ -129,7 +129,7 @@ extension NotizyCardView: UICollectionViewDelegate,UICollectionViewDataSource {
         let ref = Storage.storage().reference(withPath:  self.imagePath[indexPath.row])
 
         
-        ref.getData(maxSize: 1 * 2500 * 2500) { result in
+        ref.getData(maxSize: 1 * 5000 * 5000) { result in
           switch result {
           case let .success(data):
               cell.previewImg.image = UIImage(data: data)

@@ -22,7 +22,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         emailTF.delegate = self
         passwordTF.delegate = self
-        
+      
+//        MARK: - Check for User logged in
         guard let uid = Auth.auth().currentUser?.uid else {
               return print("no current user!")
             }
@@ -38,24 +39,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return false
     }
     
-//    //MARK: viewDidAppear = Wenn View (UI) angezeigt wird
-//    override func viewDidAppear(_ animated: Bool) {
-//        guard let uid = Auth.auth().currentUser?.uid else {
-//            print("Kein User aktuell")
-//            return
-//        }
-//
-//        if !uid.isEmpty {
-//            print("\(uid)")
-//            performSegue(withIdentifier: "loginSuccessful", sender: nil)
-//        }
-//    }
+
+
     
     
     @IBAction func logging(_ sender: UIButton) {
         
         let email = emailTF.text!
         let password = passwordTF.text!
+       
+        
         
         if !email.isEmpty && !password.isEmpty {
             
