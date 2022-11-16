@@ -15,7 +15,7 @@ class CollectionViewTaskVC: UIHostingController <ContentView> {
     required init?(coder:NSCoder) {
         super.init(coder: coder, rootView: ContentView())
     }
-
+    
 }
 
 struct FlipEffect: GeometryEffect {
@@ -68,7 +68,7 @@ struct Card:View {
                         .frame(width: 100, height: 100)
                         .cornerRadius(20)
                         .shadow(color: .black, radius:  20)
-                        
+                    
                 }
                 Text(name)
                     .font(.title2)
@@ -87,7 +87,7 @@ struct Card:View {
                         .font(.body)
                     .foregroundColor(.white)}
             }
-     )
+            )
     }
     
 }
@@ -104,8 +104,8 @@ struct BusinessCard: View {
     var body: some View {
         ZStack {
             Card(adresse: adresse ?? "", email: email ?? "",
-            notes: notes ?? "")
-                .opacity(flipped ? 0 : 1)
+                 notes: notes ?? "")
+            .opacity(flipped ? 0 : 1)
             Card(name: name ?? "", image: image ?? "")
                 .opacity(flipped ? 1 : 0)
             
@@ -132,15 +132,15 @@ func newUser() -> BusinessCard{
     @State var email: String?
     @State var notes: String?
     @State var image: String?
-
+    
     @State var mycontact: Contact?
-
-
-
+    
+    
+    
     var contacts = BusinessCard(flipped: false, flip: false, adresse: adress ?? "", name: name ?? "", email: email ?? "", notes:  notes ?? "", image: image ?? "")
-
+    
     return contacts
-
+    
 }
 
 
@@ -152,13 +152,13 @@ struct ContentView: View {
     var body: some View {
         
         
-
+        
         // MARK: - Scrollbare VisitenKarte
         List {
             newUser()
-//            ForEach(1..<2) {_ in
-//                BusinessCard()
-//            }
+            //            ForEach(1..<2) {_ in
+            //                BusinessCard()
+            //            }
         }
         
     }
