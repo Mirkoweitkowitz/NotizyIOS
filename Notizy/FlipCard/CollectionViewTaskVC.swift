@@ -128,22 +128,22 @@ let context = (UIApplication.shared.delegate as! AppDelegate).persistentContaine
 
 // neuen Benutzer erstellen
 
-func newUser() -> BusinessCard{
-    @State var adress: String?
-    @State var name: String?
-    @State var email: String?
-    @State var notes: String?
-    @State var image: String?
-    
-    @State var mycontact: Contact?
-    
-    
-    
-    var contacts = BusinessCard(flipped: false, flip: false, adresse: adress ?? "", name: name ?? "", email: email ?? "", notes:  notes ?? "", image: image ?? "")
-    
-    return contacts
-    
-}
+//func newUser() -> BusinessCard{
+//    @State var adress: String?
+//    @State var name: String?
+//    @State var email: String?
+//    @State var notes: String?
+//    @State var image: String?
+//
+//    @State var mycontact: Contact?
+//
+//
+//
+//    var contacts = BusinessCard(flipped: false, flip: false, adresse: adress ?? "", name: name ?? "", email: email ?? "", notes:  notes ?? "", image: image ?? "")
+//
+//    return contacts
+//
+//}
 
 
 
@@ -164,9 +164,10 @@ struct ContentView: View {
         
         // MARK: - Scrollbare VisitenKarte
         List {
-//            newUser()
-                        ForEach(contacts) {_ in
-                            BusinessCard()
+
+                        ForEach(contacts) {contact in
+                            BusinessCard(flipped: false, flip: false, adresse: contact.adress,
+                                         name: contact.name, email: contact.email, notes:  contact.notes, image: contact.image?.description)
                         }
         }
         
