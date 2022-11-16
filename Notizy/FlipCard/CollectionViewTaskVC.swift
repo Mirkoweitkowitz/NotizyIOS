@@ -10,13 +10,15 @@ import SwiftUI
 import CoreData
 
 // MARK: Swift mit SwiftUI kombiniert
-class CollectionViewTaskVC: UIHostingController <ContentView> {
+class CollectionViewTaskVC: UIHostingController <FlipCardView> {
     
     required init?(coder:NSCoder) {
-        super.init(coder: coder, rootView: ContentView())
+        super.init(coder: coder, rootView: FlipCardView())
     }
     
 }
+
+
 
 struct FlipEffect: GeometryEffect {
     var animatableData: Double {
@@ -149,16 +151,23 @@ struct ContentView: View {
     @State var flipped: Bool = false
     @State var flip: Bool = false
     
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(sortDescriptors:
+                    [NSSortDescriptor(keyPath: \Contact.name, ascending: true)])
+    var contacts: FetchedResults<Contact>
+    
+    
     var body: some View {
         
         
         
         // MARK: - Scrollbare VisitenKarte
         List {
-            newUser()
-            //            ForEach(1..<2) {_ in
-            //                BusinessCard()
-            //            }
+//            newUser()
+                        ForEach(contacts) {_ in
+                            BusinessCard()
+                        }
         }
         
     }
@@ -169,4 +178,16 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct FlipCardView: View {
+    
+    var body: some View {
+        
+      
+            ContentView()
+                .environment(\.managedObjectContext, context)
+        
+    }
+    
 }
