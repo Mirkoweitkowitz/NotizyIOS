@@ -174,7 +174,8 @@ struct ContentView: View {
                     Section {
                         BusinessCard(flipped: false, flip: false, adresse: contact.adress,
                                      name: contact.name, email: contact.email, notes:  contact.notes, image: contact.image?.description)
-                    }
+                    }.listRowBackground(Color.clear)
+                        .shadow(color: .gray.opacity(0.8), radius:  20)
                 }
             }.scrollContentBackground(.hidden)
             
