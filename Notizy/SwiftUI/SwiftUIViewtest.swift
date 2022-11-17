@@ -14,12 +14,28 @@ struct SwiftUIViewtest: View {
    
     
     var body: some View {
-        Text("Hello SwiftUi")
+        
+        VStack {
+                 Spacer();
+                 Text("Hallo");
+                 Text("Hallo2");
+                 Text("Hallo2");
+                 Text("Hallo2");
+                 Text("Hallo2");
+                 Text("Hallo2");
+                 Text("Hallo2");
+                 Spacer();
+                 }.background(Image("notizy.img")
+                     .resizable()
+                     .aspectRatio(UIImage(named: "notizy.img")!.size, contentMode: .fill)
+                     .clipped())
+                 .edgesIgnoringSafeArea(.all)
+         }
+     }
         
        
           
-        }
-    }
+   
 
 
 

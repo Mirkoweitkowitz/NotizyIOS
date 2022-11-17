@@ -57,6 +57,7 @@ struct Card:View {
     var image: String = ""
     
     var body: some View {
+        
         RoundedRectangle(cornerRadius: 10)
             .fill(LinearGradient(gradient: Gradient(colors: [Color.green, Color.pink]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .frame(width:330, height: 200)
@@ -104,6 +105,7 @@ struct BusinessCard: View {
     @State var image: String?
     
     var body: some View {
+        
         ZStack {
             Card(adresse: adresse ?? "", email: email ?? "",
                  notes: notes ?? "")
@@ -118,6 +120,7 @@ struct BusinessCard: View {
                 flip.toggle()
             }
         })
+        
     }
     
 }
@@ -147,6 +150,7 @@ let context = (UIApplication.shared.delegate as! AppDelegate).persistentContaine
 
 
 
+
 struct ContentView: View {
     @State var flipped: Bool = false
     @State var flip: Bool = false
@@ -158,18 +162,28 @@ struct ContentView: View {
     var contacts: FetchedResults<Contact>
     
     
+    
     var body: some View {
         
-        
-        
-        // MARK: - Scrollbare VisitenKarte
-        List {
-
-                        ForEach(contacts) {contact in
-                            BusinessCard(flipped: false, flip: false, adresse: contact.adress,
-                                         name: contact.name, email: contact.email, notes:  contact.notes, image: contact.image?.description)
-                        }
-        }
+        ZStack {
+            // MARK: - Scrollbare VisitenKarte
+            
+            List {
+                
+                ForEach(contacts) {contact in
+                    Section {
+                        BusinessCard(flipped: false, flip: false, adresse: contact.adress,
+                                     name: contact.name, email: contact.email, notes:  contact.notes, image: contact.image?.description)
+                    }
+                }
+            }.scrollContentBackground(.hidden)
+            
+            
+        }.background(Image("notizy.img")
+            .resizable()
+            .aspectRatio(UIImage(named: "notizy.img")!.size, contentMode: .fill)
+            .clipped())
+        .edgesIgnoringSafeArea(.all)
         
     }
 }
@@ -185,9 +199,9 @@ struct FlipCardView: View {
     
     var body: some View {
         
-      
-            ContentView()
-                .environment(\.managedObjectContext, context)
+        
+        ContentView()
+            .environment(\.managedObjectContext, context)
         
     }
     
