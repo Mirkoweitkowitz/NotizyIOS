@@ -54,7 +54,7 @@ struct Card:View {
     var adresse:String = ""
     var email: String = ""
     var notes: String = ""
-    var image: String = ""
+    var image: Data?
     
     var body: some View {
         
@@ -64,9 +64,9 @@ struct Card:View {
         
         
             .shadow(color: Color("shadow"),radius: 10, x: 5, y: 5)
-            .overlay(VStack (alignment:image != "" ? .center : .leading, spacing: 10) {
-                if image != "" {
-                    Image(image)
+            .overlay(VStack (alignment:image != nil ? .center : .leading, spacing: 10) {
+                if image != nil {
+                    Image(uiImage: UIImage(data: image!)!)
                         .resizable()
                         .frame(width: 100, height: 100)
                         .cornerRadius(20)
@@ -102,7 +102,7 @@ struct BusinessCard: View {
     @State var name: String?
     @State var email: String?
     @State var notes: String?
-    @State var image: String?
+    @State var image: Data?
     
     var body: some View {
         
@@ -110,7 +110,7 @@ struct BusinessCard: View {
             Card(adresse: adresse ?? "", email: email ?? "",
                  notes: notes ?? "")
             .opacity(flipped ? 0 : 1)
-            Card(name: name ?? "", image: image ?? "")
+            Card(name: name ?? "", image: image)
                 .opacity(flipped ? 1 : 0)
             
         }
@@ -124,31 +124,6 @@ struct BusinessCard: View {
     }
     
 }
-var mirko = BusinessCard(flipped: false, flip: false, adresse: "Forster Straße 13 / 12627 Berlin", name: "Mirko Weitkowitz", email: "mweitkowitz@web.de", notes: "Notizen", image: "kingMirko")
-
-// Referenz zum Core Data Persistent Store / managedObjectContext
-let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-// neuen Benutzer erstellen
-
-//func newUser() -> BusinessCard{
-//    @State var adress: String?
-//    @State var name: String?
-//    @State var email: String?
-//    @State var notes: String?
-//    @State var image: String?
-//
-//    @State var mycontact: Contact?
-//
-//
-//
-//    var contacts = BusinessCard(flipped: false, flip: false, adresse: adress ?? "", name: name ?? "", email: email ?? "", notes:  notes ?? "", image: image ?? "")
-//
-//    return contacts
-//
-//}
-
-
 
 
 struct ContentView: View {
@@ -169,11 +144,19 @@ struct ContentView: View {
             // MARK: - Scrollbare VisitenKarte
             
             List {
-                
+                // neuen Kontakte aus CoreData
                 ForEach(contacts) {contact in
                     Section {
                         BusinessCard(flipped: false, flip: false, adresse: contact.adress,
-                                     name: contact.name, email: contact.email, notes:  contact.notes, image: contact.image?.description)
+                                     name: contact.name,
+                                     email: contact.email,
+                                     notes:  contact.notes,
+                                     image: contact.image)
+                        
+//                        if contact.image != nil{
+//                            imgContact.image = UIImage(data: contact.image!)
+//                        }
+                        
                     }.listRowBackground(Color.clear)
                         .shadow(color: .gray.opacity(0.8), radius:  20)
                 }
@@ -187,12 +170,52 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.all)
         
     }
+
+}
+
+
+// Referenz zum Core Data Persistent Store / managedObjectContext
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+// MARK: die Preview Daten erstellen
+struct PreviewDataController {
+    
+    let previewContainer: NSPersistentContainer
+    static var shared: PreviewDataController = {
+        var controller = PreviewDataController()
+        var context = controller.previewContainer.viewContext
+        
+        let contact = Contact (context: context)
+        contact.name = "Alle"
+        contact.adress = "alle"
+        contact.email = "ich@wir.de"
+        contact.notes = "syntax institut"
+        contact.image = UIImage(named: "syntax1")?.jpegData(compressionQuality: 1.0)
+        do{
+            try context.save()
+        }catch {
+            print(error)
+        }
+        return controller
+    }()
+    
+    init() {
+        previewContainer = NSPersistentContainer(name: "Notizy")
+        previewContainer.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        previewContainer.loadPersistentStores { description, error in
+            if let error = error {
+                print(error)
+            }
+        }
+        previewContainer.viewContext.automaticallyMergesChangesFromParent = true
+    }
+       
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView()  .environment(\.managedObjectContext, PreviewDataController.shared.previewContainer.viewContext)
     }
 }
 

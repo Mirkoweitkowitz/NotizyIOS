@@ -9,11 +9,15 @@ import UIKit
 
 
 
-class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Variablen zur Annahme der Daten
     var contact: Contact!
     var contactIndex: Int!
+    
+//    MARK: Image über Button auswählen
+    let imagePicker = UIImagePickerController()
+    
     
     // Referenz zum Core Data Persistent Store / managedObjectContext
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -57,17 +61,20 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
             adressLBL.isHidden = true
             emailLBL.isHidden = true
             notizenLBL.isHidden = true
+           
             
             nameTXT.isHidden = false
             adressTXT.isHidden = false
             emailTXT.isHidden = false
             notizTXTView.isEditable = true
             
+            
             nameTXT.text = nameLBL.text
             adressTXT.text = adressLBL.text
             emailTXT.text = emailLBL.text
             
             saveButton.isHidden = false
+            btnCamera.isHidden = false
         
         } else {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonTapped(_:)))
@@ -85,6 +92,7 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
             notizTXTView.text = contact.notes
             
             saveButton.isHidden = true
+            btnCamera.isHidden = true
         }
     }
     
@@ -99,6 +107,7 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
         contact.adress = adressTXT.text
         contact.email = emailTXT.text
         contact.notes = notizTXTView.text
+        contact.image = imgContact.image?.jpegData(compressionQuality: 1.0)
         
         delegate?.update(contact: contact, index: contactIndex)
         
@@ -118,6 +127,8 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
         adressTXT.isHidden = true
         emailTXT.isHidden = true
         notizTXTView.isEditable = false
+        
+        btnCamera.isHidden = true
         saveButton.isHidden = true
         
         // Save Data
@@ -155,7 +166,32 @@ class EditVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
     
     @IBAction func cameraBTN(_ sender: UIButton) {
+        
+        
+        imagePicker.allowsEditing = false
+           imagePicker.sourceType = .photoLibrary
+               
+           present(imagePicker, animated: true, completion: nil)
+       
     }
+    
+    // MARK: - UIImagePickerControllerDelegate Methods
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imgContact.contentMode = .scaleAspectFit
+            imgContact.image = pickedImage
+        }
+
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+//     MARK: schließt den ImagePicker
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 //Keyboard verschwinden lassen
 func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -177,7 +213,7 @@ override func viewDidLoad() {
         imgContact.image = UIImage(data: contact.image!)
     }
     
-   
+    imagePicker.delegate = self
     
     // Text View verschönern
     notizTXTView.layer.cornerRadius = 3
@@ -213,7 +249,8 @@ override func viewDidLoad() {
         self.view.frame.origin.y = 0
       }
   }
-
+    
+  
 }
 
 
