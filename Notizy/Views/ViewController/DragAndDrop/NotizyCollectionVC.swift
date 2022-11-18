@@ -13,6 +13,11 @@ protocol CollectionViewCellDelegate: AnyObject {
 }
 class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+//    MARK: collectionView
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("hallo du da")
+    }
+    
     private var collectionView: UICollectionView?
     
     private let table: UITableView = {
