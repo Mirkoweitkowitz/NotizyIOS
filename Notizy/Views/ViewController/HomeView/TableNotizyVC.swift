@@ -18,6 +18,9 @@ class TableNotizyVC: UIViewController {
     
     @IBOutlet weak var imageHome: UIImageView!
     
+    
+    @IBOutlet weak var notes: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +37,14 @@ class TableNotizyVC: UIViewController {
         imageHome.layer.borderWidth = 3
         imageHome.layer.borderColor = UIColor.green.cgColor
 
+       
+        notes.layer.shadowColor = UIColor.green.cgColor
+        notes.layer.shadowOffset = .zero
+        notes.layer.shadowOpacity = 0.5
+        notes.layer.shadowRadius = 20
+        notes.imageView?.layer.cornerRadius = 30
+       
+        
     }
     
     
