@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-BN-hVb">
-                                <rect key="frame" x="-21" y="0.0" width="385" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="x8V-N1-BM0">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9U-cY-5rB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1391" y="826"/>
+            <point key="canvasLocation" x="-1391.2" y="825.3694581280788"/>
         </scene>
         <!--Notizy-->
         <scene sceneID="tne-QT-ifu">
@@ -283,6 +283,9 @@
                                                 <rect key="frame" x="0.0" y="191.66666666666663" width="51" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system"/>
+                                                <connections>
+                                                    <segue destination="pDM-Qf-EBA" kind="show" id="ZrD-66-ece"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVB-f9-7Ya">
                                                 <rect key="frame" x="0.0" y="230" width="51" height="34.333333333333314"/>
@@ -503,6 +506,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <segue destination="ifb-rr-Lbk" kind="show" identifier="DetailCell" id="P4x-9r-37E"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -634,7 +640,9 @@
         <scene sceneID="dJq-G4-EfN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pVx-CF-nF3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="wu4-it-5E1"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="wu4-it-5E1">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AdX-h1-Sb2">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
@@ -1076,11 +1084,11 @@
             </objects>
             <point key="canvasLocation" x="2324" y="-1315"/>
         </scene>
-        <!--Notes-->
+        <!--Scans-->
         <scene sceneID="rqQ-Hq-C4q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="W5V-nR-hIv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="U9t-wd-www"/>
+                    <tabBarItem key="tabBarItem" title="Scans" image="scanner.fill" catalog="system" id="U9t-wd-www"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="OnS-u7-1Oc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8OU-da-49Y">
@@ -1469,11 +1477,113 @@
             </objects>
             <point key="canvasLocation" x="4738" y="-1475"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="F5k-jg-Ntz">
+            <objects>
+                <viewController id="pDM-Qf-EBA" customClass="ViewController" customModule="Notizy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rbV-8E-21l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notizy.img" translatesAutoresizingMaskIntoConstraints="NO" id="9R9-97-7PU">
+                                <rect key="frame" x="0.0" y="121" width="375" height="533"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szw-VG-KP6">
+                                <rect key="frame" x="147.66666666666666" y="359.66666666666669" width="80" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="aFi-VN-pk0" kind="show" id="3GR-I6-rO1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr0-TD-3zr">
+                                <rect key="frame" x="162" y="265.66666666666669" width="51.333333333333343" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.3947068453" green="1" blue="0.40024748440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8rV-YS-SlK"/>
+                        <constraints>
+                            <constraint firstItem="zr0-TD-3zr" firstAttribute="centerX" secondItem="rbV-8E-21l" secondAttribute="centerX" id="8nz-Av-I8a"/>
+                            <constraint firstItem="9R9-97-7PU" firstAttribute="top" secondItem="rbV-8E-21l" secondAttribute="top" constant="121" id="9Bf-aO-epH"/>
+                            <constraint firstItem="8rV-YS-SlK" firstAttribute="trailing" secondItem="9R9-97-7PU" secondAttribute="trailing" id="Q99-4k-HQs"/>
+                            <constraint firstItem="Szw-VG-KP6" firstAttribute="centerY" secondItem="rbV-8E-21l" secondAttribute="centerY" id="WG5-UE-Ytc"/>
+                            <constraint firstItem="9R9-97-7PU" firstAttribute="leading" secondItem="8rV-YS-SlK" secondAttribute="leading" id="aoj-B8-kw8"/>
+                            <constraint firstItem="zr0-TD-3zr" firstAttribute="centerY" secondItem="rbV-8E-21l" secondAttribute="centerY" constant="-100" id="cip-O1-9Ts"/>
+                            <constraint firstItem="Szw-VG-KP6" firstAttribute="centerX" secondItem="rbV-8E-21l" secondAttribute="centerX" id="d6p-57-Lf3"/>
+                            <constraint firstItem="8rV-YS-SlK" firstAttribute="bottom" secondItem="9R9-97-7PU" secondAttribute="bottom" constant="101" id="yN8-X0-hUb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eOJ-MK-AsJ"/>
+                    <connections>
+                        <outlet property="label" destination="zr0-TD-3zr" id="fzu-cW-huK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UTX-UJ-oFm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463.19999999999999" y="680.54187192118229"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="igX-1V-HLG">
+            <objects>
+                <hostingController id="aFi-VN-pk0" customClass="SettingsViewController" customModule="Notizy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EkG-8l-Psr"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEA-Ii-vya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="681"/>
+        </scene>
+        <!--Detail Collection View-->
+        <scene sceneID="nhW-jy-Ge6">
+            <objects>
+                <viewController id="ifb-rr-Lbk" customClass="DetailCollectionView" customModule="Notizy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7A0-73-J3l"/>
+                        <viewControllerLayoutGuide type="bottom" id="hNb-XM-mvD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M3G-KI-wy2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notizy.img" translatesAutoresizingMaskIntoConstraints="NO" id="diN-GK-Ic9">
+                                <rect key="frame" x="0.0" y="26" width="375" height="673"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6m-eQ-a36">
+                                <rect key="frame" x="33" y="148" width="53" height="24"/>
+                                <color key="backgroundColor" red="0.3947068453" green="1" blue="0.40024748440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="GB1-FQ-paA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O6m-eQ-a36" firstAttribute="leading" secondItem="M3G-KI-wy2" secondAttribute="leadingMargin" constant="17" id="7rR-8z-SDI"/>
+                            <constraint firstItem="O6m-eQ-a36" firstAttribute="top" secondItem="M3G-KI-wy2" secondAttribute="topMargin" constant="101" id="8p6-xe-f44"/>
+                            <constraint firstAttribute="trailing" secondItem="diN-GK-Ic9" secondAttribute="trailing" id="N8C-Ya-Ct6"/>
+                            <constraint firstItem="diN-GK-Ic9" firstAttribute="leading" secondItem="M3G-KI-wy2" secondAttribute="leading" id="NAQ-TI-RX2"/>
+                            <constraint firstItem="diN-GK-Ic9" firstAttribute="top" secondItem="7A0-73-J3l" secondAttribute="bottom" constant="26" id="Vah-QG-3gU"/>
+                            <constraint firstItem="hNb-XM-mvD" firstAttribute="top" secondItem="diN-GK-Ic9" secondAttribute="bottom" constant="22" id="ygU-xf-4X1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xH7-8b-Zn7"/>
+                    <connections>
+                        <outlet property="notesDetail" destination="O6m-eQ-a36" id="S9w-xf-G12"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fnm-Hg-daw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1405.5999999999999" y="521.67487684729065"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="oAi-wC-rn6"/>
         <segue reference="fVk-DB-Hge"/>
-        <segue reference="hIo-Zl-6ey"/>
+        <segue reference="1mr-m1-kgT"/>
         <segue reference="ST3-tA-1cQ"/>
         <segue reference="Ki1-Ti-VJt"/>
         <segue reference="h9M-U0-N7R"/>
@@ -1502,6 +1612,7 @@
         <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="notizy.img" width="238" height="402"/>
         <image name="scanner" catalog="system" width="128" height="93"/>
+        <image name="scanner.fill" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="labelColor">

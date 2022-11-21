@@ -16,11 +16,8 @@ protocol ContactDelegate: AnyObject {
 class ContactTVC: UITableViewController {
     
     
-    //TODO:  Filterdaten einfügen
+  
     
-    //TODO:  Methode: textDidChange implementieren
-    
-    //MARK: Variablen und Datenmodell
     @IBOutlet var contactListTV: UITableView!
     
     
@@ -41,7 +38,7 @@ class ContactTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        TODO: DataSource übergeben
+        //        MARK: DataSource übergeben
         contactListTV.dataSource = self
         searchBar.delegate = self
         

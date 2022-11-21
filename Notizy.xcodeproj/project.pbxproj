@@ -36,6 +36,12 @@
 		4054F05728C9CB5100710F30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4054F05528C9CB5100710F30 /* Main.storyboard */; };
 		4054F05928C9CB5300710F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4054F05828C9CB5300710F30 /* Assets.xcassets */; };
 		4054F05C28C9CB5300710F30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4054F05A28C9CB5300710F30 /* LaunchScreen.storyboard */; };
+		4071F3D1292B8C8B00C256BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071F3D0292B8C8B00C256BF /* SettingsView.swift */; };
+		4071F3D3292B8E4000C256BF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071F3D2292B8E4000C256BF /* Settings.swift */; };
+		4071F3D8292B90D200C256BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071F3D7292B90D200C256BF /* ViewController.swift */; };
+		4071F3DA292B91A300C256BF /* FUserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071F3D9292B91A300C256BF /* FUserDefaultsPropertyWrapper.swift */; };
+		4071F3DC292B91E400C256BF /* FontSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071F3DB292B91E400C256BF /* FontSizeView.swift */; };
+		4071F3DE292BA91300C256BF /* DetailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071F3DD292BA91300C256BF /* DetailCollectionView.swift */; };
 		4090C50328FED3B500CB1D96 /* ModernCellNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090C50228FED3B500CB1D96 /* ModernCellNotizyVC.swift */; };
 		4090C50528FEDBF700CB1D96 /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090C50428FEDBF700CB1D96 /* CustomTVC.swift */; };
 		4090C50728FEEF6200CB1D96 /* Notizy_to_do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */; };
@@ -83,6 +89,12 @@
 		4054F05828C9CB5300710F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4054F05B28C9CB5300710F30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4054F05D28C9CB5300710F30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4071F3D0292B8C8B00C256BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4071F3D2292B8E4000C256BF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4071F3D7292B90D200C256BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4071F3D9292B91A300C256BF /* FUserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
+		4071F3DB292B91E400C256BF /* FontSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeView.swift; sourceTree = "<group>"; };
+		4071F3DD292BA91300C256BF /* DetailCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionView.swift; sourceTree = "<group>"; };
 		4090C50228FED3B500CB1D96 /* ModernCellNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernCellNotizyVC.swift; sourceTree = "<group>"; };
 		4090C50428FEDBF700CB1D96 /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
 		4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notizy_to_do.rtf; sourceTree = "<group>"; };
@@ -201,9 +213,22 @@
 			path = Notizy;
 			sourceTree = "<group>";
 		};
+		4071F3D4292B8E8600C256BF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4071F3D0292B8C8B00C256BF /* SettingsView.swift */,
+				4071F3D2292B8E4000C256BF /* Settings.swift */,
+				4071F3D7292B90D200C256BF /* ViewController.swift */,
+				4071F3D9292B91A300C256BF /* FUserDefaultsPropertyWrapper.swift */,
+				4071F3DB292B91E400C256BF /* FontSizeView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		4098AB57291939D600EBBD90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4071F3D4292B8E8600C256BF /* Settings */,
 				40BB970F28DDA1E9000ECDCE /* ViewController */,
 				4098AB58291939DF00EBBD90 /* PageView */,
 			);
@@ -232,6 +257,7 @@
 			children = (
 				4054F05328C9CB5100710F30 /* NotizyCardView.swift */,
 				4006EB1428EEDDC700BEB33F /* NotizyCollectionVC.swift */,
+				4071F3DD292BA91300C256BF /* DetailCollectionView.swift */,
 				40DF07A528EC592C0043224A /* DedailNotizyVC.swift */,
 				403E310D291E5830005A7A62 /* ScanCVC.swift */,
 			);
@@ -449,9 +475,13 @@
 				40D341F828CB85760044B470 /* PictureCollectionViewCell.swift in Sources */,
 				40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */,
 				40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */,
+				4071F3D3292B8E4000C256BF /* Settings.swift in Sources */,
 				40D341F628CB85410044B470 /* CollectionViewTaskVC.swift in Sources */,
+				4071F3DA292B91A300C256BF /* FUserDefaultsPropertyWrapper.swift in Sources */,
+				4071F3D1292B8C8B00C256BF /* SettingsView.swift in Sources */,
 				40DF07A628EC592C0043224A /* DedailNotizyVC.swift in Sources */,
 				4098AB562919394300EBBD90 /* PageViewController.swift in Sources */,
+				4071F3DC292B91E400C256BF /* FontSizeView.swift in Sources */,
 				40DBC933291567AE00EC71E0 /* SwiftUIViewtest.swift in Sources */,
 				4054F05428C9CB5100710F30 /* NotizyCardView.swift in Sources */,
 				4090C50328FED3B500CB1D96 /* ModernCellNotizyVC.swift in Sources */,
@@ -461,6 +491,7 @@
 				40D341F028CB64700044B470 /* SaveVC.swift in Sources */,
 				403E310E291E5830005A7A62 /* ScanCVC.swift in Sources */,
 				40DF07AD28EC82B00043224A /* TableCollectionViewCell.swift in Sources */,
+				4071F3D8292B90D200C256BF /* ViewController.swift in Sources */,
 				4054F05028C9CB5100710F30 /* AppDelegate.swift in Sources */,
 				40D341EC28CB5C420044B470 /* TableNotizyVC.swift in Sources */,
 				40C40AD0291A8DC400F651F9 /* FirestoreReadDetailsVC.swift in Sources */,
@@ -475,6 +506,7 @@
 				4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */,
 				40D341F228CB64800044B470 /* EditVC.swift in Sources */,
 				409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */,
+				4071F3DE292BA91300C256BF /* DetailCollectionView.swift in Sources */,
 				4095547329152C0000DFB373 /* Contact+CoreDataClass.swift in Sources */,
 				40437E5128EDA3BF0058BDA2 /* models.swift in Sources */,
 				40C40AD4291A8E9D00F651F9 /* Recipe.swift in Sources */,

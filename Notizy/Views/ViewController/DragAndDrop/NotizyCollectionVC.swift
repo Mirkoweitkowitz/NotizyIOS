@@ -13,8 +13,12 @@ protocol CollectionViewCellDelegate: AnyObject {
 }
 class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    
+   
+    
 //    MARK: collectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "DetailCell", sender: nil)
         print("hallo du da")
     }
     
@@ -29,6 +33,15 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
     }()
     
     
+    
+//    func getRandomColor() -> UIColor {
+//       //Generate between 0 to 1
+//       let red:CGFloat = CGFloat(drand48())
+//       let green:CGFloat = CGFloat(drand48())
+//       let blue:CGFloat = CGFloat(drand48())
+//
+//      return UIColor(red:red, green: green, blue: blue, alpha: 0.7)
+//    }
     var colors: [UIColor] = [
         .link,
         .systemGreen,
@@ -155,4 +168,7 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
         
     }
     
+//    DetailCollectionView
+    
+  
 }

@@ -186,9 +186,9 @@ struct PreviewDataController {
         var context = controller.previewContainer.viewContext
         
         let contact = Contact (context: context)
-        contact.name = "Alle"
-        contact.adress = "alle"
-        contact.email = "ich@wir.de"
+        contact.name = "Syntax Institut"
+        contact.adress = "Stresemannstr.123 - 10963 Berlin  "
+        contact.email = "info@syntax-institut.de"
         contact.notes = "syntax institut"
         contact.image = UIImage(named: "syntax1")?.jpegData(compressionQuality: 1.0)
         do{
