@@ -33,6 +33,8 @@ final class UserSettings: ObservableObject {
             self.objectWillChange.send()
         }
     }
+    
+    
 }
 
 struct ColorSetting:Identifiable {

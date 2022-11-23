@@ -10,6 +10,7 @@
 		4006EB1528EEDDC700BEB33F /* NotizyCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4006EB1428EEDDC700BEB33F /* NotizyCollectionVC.swift */; };
 		4006EB1728EEFCAB00BEB33F /* Matrix.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4006EB1628EEFCAB00BEB33F /* Matrix.mp4 */; };
 		400DB33528FE9AFF00401566 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400DB33428FE9AFF00401566 /* LoginVC.swift */; };
+		4010B166292CE6B200C39A8A /* AnimateText in Frameworks */ = {isa = PBXBuildFile; productRef = 4010B165292CE6B200C39A8A /* AnimateText */; };
 		401AF622292BDDFA0050F3D3 /* NotesAddenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401AF621292BDDFA0050F3D3 /* NotesAddenVC.swift */; };
 		402521E629012F7200753BEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 402521E529012F7200753BEB /* GoogleService-Info.plist */; };
 		402521E92901319D00753BEB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 402521E82901319D00753BEB /* FirebaseAnalytics */; };
@@ -25,6 +26,7 @@
 		402521FD2901319D00753BEB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 402521FC2901319D00753BEB /* FirebaseStorage */; };
 		402CF182291E9A0B0040C35F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 402CF181291E9A0B0040C35F /* SDWebImage */; };
 		402CF184291E9A0B0040C35F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 402CF183291E9A0B0040C35F /* SDWebImageMapKit */; };
+		402DB4BE292E681200ED86E8 /* NotizenCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402DB4BD292E681200ED86E8 /* NotizenCVC.swift */; };
 		403E310E291E5830005A7A62 /* ScanCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403E310D291E5830005A7A62 /* ScanCVC.swift */; };
 		403E3110291E5D74005A7A62 /* skizzen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 403E310F291E5D74005A7A62 /* skizzen.mp4 */; };
 		403E3113291E79BC005A7A62 /* ScalingHeaderScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 403E3112291E79BC005A7A62 /* ScalingHeaderScrollView */; };
@@ -46,8 +48,6 @@
 		4090C50328FED3B500CB1D96 /* ModernCellNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090C50228FED3B500CB1D96 /* ModernCellNotizyVC.swift */; };
 		4090C50528FEDBF700CB1D96 /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090C50428FEDBF700CB1D96 /* CustomTVC.swift */; };
 		4090C50728FEEF6200CB1D96 /* Notizy_to_do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */; };
-		4095547329152C0000DFB373 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */; };
-		4095547429152C0000DFB373 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */; };
 		4098AB562919394300EBBD90 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB552919394300EBBD90 /* PageViewController.swift */; };
 		4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB5A29193BF100EBBD90 /* CoreDaten.swift */; };
 		409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AE24428FD914D00617481 /* NotizyCVC.swift */; };
@@ -79,6 +79,7 @@
 		400DB33428FE9AFF00401566 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		401AF621292BDDFA0050F3D3 /* NotesAddenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAddenVC.swift; sourceTree = "<group>"; };
 		402521E529012F7200753BEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		402DB4BD292E681200ED86E8 /* NotizenCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizenCVC.swift; sourceTree = "<group>"; };
 		403E310D291E5830005A7A62 /* ScanCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCVC.swift; sourceTree = "<group>"; };
 		403E310F291E5D74005A7A62 /* skizzen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = skizzen.mp4; sourceTree = "<group>"; };
 		40437E5028EDA3BF0058BDA2 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
@@ -100,8 +101,6 @@
 		4090C50228FED3B500CB1D96 /* ModernCellNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernCellNotizyVC.swift; sourceTree = "<group>"; };
 		4090C50428FEDBF700CB1D96 /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
 		4090C50628FEEF6200CB1D96 /* Notizy_to_do.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notizy_to_do.rtf; sourceTree = "<group>"; };
-		4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4098AB552919394300EBBD90 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		4098AB5929193A5700EBBD90 /* Skizzieren.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skizzieren.mp4; sourceTree = "<group>"; };
 		4098AB5A29193BF100EBBD90 /* CoreDaten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDaten.swift; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 				402521FB2901319D00753BEB /* FirebaseMessaging in Frameworks */,
 				402521ED2901319D00753BEB /* FirebaseAppCheck in Frameworks */,
 				402521F72901319D00753BEB /* FirebaseFunctions in Frameworks */,
+				4010B166292CE6B200C39A8A /* AnimateText in Frameworks */,
 				402521F52901319D00753BEB /* FirebaseFirestoreSwift in Frameworks */,
 				402521E92901319D00753BEB /* FirebaseAnalytics in Frameworks */,
 				402521EF2901319D00753BEB /* FirebaseAuth in Frameworks */,
@@ -175,8 +175,6 @@
 		4054F04328C9CB5100710F30 = {
 			isa = PBXGroup;
 			children = (
-				4095547129152C0000DFB373 /* Contact+CoreDataClass.swift */,
-				4095547229152C0000DFB373 /* Contact+CoreDataProperties.swift */,
 				40437E5228EDC22E0058BDA2 /* video.mp4 */,
 				403E310F291E5D74005A7A62 /* skizzen.mp4 */,
 				4006EB1628EEFCAB00BEB33F /* Matrix.mp4 */,
@@ -230,7 +228,6 @@
 		4071F3DF292BD9BF00C256BF /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				401AF621292BDDFA0050F3D3 /* NotesAddenVC.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -259,6 +256,7 @@
 			children = (
 				400DB33428FE9AFF00401566 /* LoginVC.swift */,
 				40D23BE7290165DA0056B3AF /* SignUpVC.swift */,
+				401AF621292BDDFA0050F3D3 /* NotesAddenVC.swift */,
 			);
 			path = FirebaseAuth;
 			sourceTree = "<group>";
@@ -271,6 +269,7 @@
 				4071F3DD292BA91300C256BF /* DetailCollectionView.swift */,
 				40DF07A528EC592C0043224A /* DedailNotizyVC.swift */,
 				403E310D291E5830005A7A62 /* ScanCVC.swift */,
+				402DB4BD292E681200ED86E8 /* NotizenCVC.swift */,
 			);
 			path = DragAndDrop;
 			sourceTree = "<group>";
@@ -414,6 +413,7 @@
 				402CF181291E9A0B0040C35F /* SDWebImage */,
 				402CF183291E9A0B0040C35F /* SDWebImageMapKit */,
 				40F4BB90291EAA6200965E1B /* PopupView */,
+				4010B165292CE6B200C39A8A /* AnimateText */,
 			);
 			productName = Notizy;
 			productReference = 4054F04C28C9CB5100710F30 /* Notizy.app */;
@@ -449,6 +449,7 @@
 				403E3114291E7A14005A7A62 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				402CF180291E9A0B0040C35F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				40F4BB8F291EAA6200965E1B /* XCRemoteSwiftPackageReference "PopupView" */,
+				4010B164292CE6B200C39A8A /* XCRemoteSwiftPackageReference "AnimateText" */,
 			);
 			productRefGroup = 4054F04D28C9CB5100710F30 /* Products */;
 			projectDirPath = "";
@@ -497,7 +498,6 @@
 				40DBC933291567AE00EC71E0 /* SwiftUIViewtest.swift in Sources */,
 				4054F05428C9CB5100710F30 /* NotizyCardView.swift in Sources */,
 				4090C50328FED3B500CB1D96 /* ModernCellNotizyVC.swift in Sources */,
-				4095547429152C0000DFB373 /* Contact+CoreDataProperties.swift in Sources */,
 				40D23BE8290165DA0056B3AF /* SignUpVC.swift in Sources */,
 				4090C50528FEDBF700CB1D96 /* CustomTVC.swift in Sources */,
 				40D341F028CB64700044B470 /* SaveVC.swift in Sources */,
@@ -508,6 +508,7 @@
 				40D341EC28CB5C420044B470 /* TableNotizyVC.swift in Sources */,
 				40C40AD0291A8DC400F651F9 /* FirestoreReadDetailsVC.swift in Sources */,
 				40E1EC3C290283B8006789D2 /* Ingredient.swift in Sources */,
+				402DB4BE292E681200ED86E8 /* NotizenCVC.swift in Sources */,
 				40D341F428CB75BE0044B470 /* ContactTVC.swift in Sources */,
 				40DF07AB28EC82620043224A /* CollectionTableViewCell.swift in Sources */,
 				4054F05228C9CB5100710F30 /* SceneDelegate.swift in Sources */,
@@ -519,7 +520,6 @@
 				40D341F228CB64800044B470 /* EditVC.swift in Sources */,
 				409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */,
 				4071F3DE292BA91300C256BF /* DetailCollectionView.swift in Sources */,
-				4095547329152C0000DFB373 /* Contact+CoreDataClass.swift in Sources */,
 				40437E5128EDA3BF0058BDA2 /* models.swift in Sources */,
 				40C40AD4291A8E9D00F651F9 /* Recipe.swift in Sources */,
 			);
@@ -741,6 +741,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4010B164292CE6B200C39A8A /* XCRemoteSwiftPackageReference "AnimateText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jasudev/AnimateText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
 		402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -784,6 +792,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4010B165292CE6B200C39A8A /* AnimateText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4010B164292CE6B200C39A8A /* XCRemoteSwiftPackageReference "AnimateText" */;
+			productName = AnimateText;
+		};
 		402521E82901319D00753BEB /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 402521E72901319D00753BEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

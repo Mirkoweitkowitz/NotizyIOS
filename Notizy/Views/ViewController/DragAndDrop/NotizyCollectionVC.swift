@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 protocol CollectionViewCellDelegate: AnyObject {
     func didSelectItem(with model: CollectionTableCellModel)
@@ -14,34 +15,61 @@ protocol CollectionViewCellDelegate: AnyObject {
 class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
-   
+    @IBOutlet weak var collView: UICollectionView!
     
-//    MARK: collectionView
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "DetailCell", sender: nil)
-        print("hallo du da")
+    
+    var list: [Notiz]!
+    
+    // Referenz zum Core Data Persistent Store / managedObjectContext
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        collView?.delegate = self
+        collView?.dataSource = self
+        //        backgroundColor einstellen
+        
+        collView?.backgroundColor = .clear
+        
+        //        MARK: test Code ausgeführt
+        //        for note in 1...25 {
+        //            var newNote = Notiz(context: context)
+        //            newNote.title = "note:\(note)"
+        //            newNote.text = "Test"
+        //            newNote.color = getRandomColor()
+        //
+        //        }
+        //
+        //        //Saving Data
+        //        do {
+        //           try context.save()
+        //
+        //
+        //        } catch {
+        //            print("Error by saving request")
+        //        }
+        
+    
+        
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressGesture(_:)))
+        
+        collView?.addGestureRecognizer(gesture)
+        
+        fetchNotizen()
+        
     }
     
-    private var collectionView: UICollectionView?
-    
-    private let table: UITableView = {
-        let table = UITableView(frame: .zero, style: .grouped)
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        table.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
+    func getRandomColor() -> UIColor {
+        //Generate between 0 to 1
+        let red:CGFloat = CGFloat(drand48())
+        let green:CGFloat = CGFloat(drand48())
+        let blue:CGFloat = CGFloat(drand48())
         
-        return table
-    }()
-    
-    
-    
-//    func getRandomColor() -> UIColor {
-//       //Generate between 0 to 1
-//       let red:CGFloat = CGFloat(drand48())
-//       let green:CGFloat = CGFloat(drand48())
-//       let blue:CGFloat = CGFloat(drand48())
-//
-//      return UIColor(red:red, green: green, blue: blue, alpha: 0.7)
-//    }
+        return UIColor(red:red, green: green, blue: blue, alpha: 0.7)
+    }
     var colors: [UIColor] = [
         .link,
         .systemGreen,
@@ -56,67 +84,30 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
         .systemPink,
         .purple]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    
+    // Fetch Contacts
+    func fetchNotizen() {
         
-        //        MARK: - tableHeaderView
-                table.tableHeaderView = createTableHeader()
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: view.frame.size.width/3.2,
-                                 height: view.frame.size.height/6.5)
-        
-        layout.sectionInset = UIEdgeInsets(top: 0,
-                                           left: 0,
-                                           bottom: 0,
-                                           right: 0)
-        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
-        
-        collectionView?.register(UICollectionViewCell.self,forCellWithReuseIdentifier:"cell")
-        collectionView?.delegate = self
-        collectionView?.dataSource = self
-//        backgroundColor einstellen
-        collectionView?.backgroundColor = .clear
-        view.addSubview(collectionView!)
-        
-        
-        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressGesture(_:)))
-        
-        collectionView?.addGestureRecognizer(gesture)
+        // Fetching Data
+        do {
+            self.list = try context.fetch(Notiz.fetchRequest())
+            print("fetchNotizen")
+            print(self.list!)
+            
+            
+            DispatchQueue.main.async {
+                self.collView.reloadData()
+            }
+        } catch {
+            print("Error by trying fetch request")
+        }
         
     }
     
-    //    MARK: - Video im Header einbetten
-        
-        private func createTableHeader() -> UIView? {
-            guard let path = Bundle.main.path(forResource: "Skizzen",
-                                              ofType: "mp4") else {
-                return nil
-            }
-
-            let url = URL(fileURLWithPath: path)
-
-            let player = AVPlayer(url: url)
-            player.volume = 0
-
-            let headerView = UIView(frame:CGRect(x: 0,
-                                                 y: 0,
-                                                 width: view.frame.size.width,
-                                                 height: view.frame.size.height))
-
-            let playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = headerView.bounds
-            headerView.layer.addSublayer(playerLayer)
-
-            playerLayer.videoGravity = .resizeAspectFill
-            player.play()
-
-            return headerView
-        }
     
     @objc func handleLongPressGesture(_ gesture: UILongPressGestureRecognizer) {
-        guard let collectionView = collectionView else {
+        guard let collectionView = collView else {
             return
         }
         
@@ -138,16 +129,39 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        collectionView?.frame = view.bounds
+        collView.frame = view.bounds
     }
     
+    
+    //    MARK: collectionView
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return list.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "DetailCell", sender: list[indexPath.item])
+        print("hallo du da")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "DetailCell") {
+            
+            let detailVC = segue.destination as! DetailCollectionView
+            detailVC.currentNotiz = sender as! Notiz
+            print(segue.identifier)
+        }
+      
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = colors[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! NotizenCVC
+        var currentnote = list[indexPath.row]
+        cell.backgroundColor = currentnote.color as? UIColor
+        cell.notiztitle.text = currentnote.title
         return cell
     }
     
@@ -155,20 +169,20 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
         return CGSize(width: view.frame.size.width/3.2,
                       height: view.frame.size.height/6.5)
     }
-
-//     Re-order
+    
+    //     Re-order
     
     func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
         return true
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let item = colors.remove(at: sourceIndexPath.row)
-        colors.insert(item, at: destinationIndexPath.row)
+        let item = list.remove(at: sourceIndexPath.row)
+        list.insert(item, at: destinationIndexPath.row)
         
     }
     
-//    DetailCollectionView
-    
   
+    
+    
 }
