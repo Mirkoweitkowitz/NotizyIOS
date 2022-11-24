@@ -10,6 +10,8 @@ import UIKit
 class NotizenCVC: UICollectionViewCell {
     
     
+    @IBOutlet weak var cellCollView: UITextView!
+    
     @IBOutlet weak var notiztitle: UILabel!
     
 }

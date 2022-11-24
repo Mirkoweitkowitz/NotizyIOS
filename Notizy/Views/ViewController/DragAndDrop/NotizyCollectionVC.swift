@@ -14,6 +14,7 @@ protocol CollectionViewCellDelegate: AnyObject {
 }
 class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+  
     
     @IBOutlet weak var collView: UICollectionView!
     
@@ -35,22 +36,19 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
         collView?.backgroundColor = .clear
         
         //        MARK: test Code ausgeführt
-        //        for note in 1...25 {
-        //            var newNote = Notiz(context: context)
-        //            newNote.title = "note:\(note)"
-        //            newNote.text = "Test"
-        //            newNote.color = getRandomColor()
-        //
-        //        }
-        //
-        //        //Saving Data
-        //        do {
-        //           try context.save()
-        //
-        //
-        //        } catch {
-        //            print("Error by saving request")
-        //        }
+//                for note in 1...25 {
+//                    var newNote = Notiz(context: context)
+//                    newNote.title = "note:\(note)"
+//                    newNote.text = "Test"
+//                    newNote.color = getRandomColor()
+//               }
+//
+//                //Saving Data
+//                do {
+//                   try context.save()
+//                } catch {
+//                    print("Error by saving request")
+//                }
         
     
         
@@ -150,8 +148,8 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
         if (segue.identifier == "DetailCell") {
             
             let detailVC = segue.destination as! DetailCollectionView
-            detailVC.currentNotiz = sender as! Notiz
-            print(segue.identifier)
+            detailVC.currentNotiz = sender as? Notiz
+          
         }
       
     }
@@ -162,6 +160,7 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
         var currentnote = list[indexPath.row]
         cell.backgroundColor = currentnote.color as? UIColor
         cell.notiztitle.text = currentnote.title
+        cell.cellCollView.text = currentnote.text
         return cell
     }
     

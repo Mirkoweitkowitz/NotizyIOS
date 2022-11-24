@@ -68,6 +68,7 @@
 		40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07A728EC81B40043224A /* NotizyVC.swift */; };
 		40DF07AB28EC82620043224A /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07AA28EC82620043224A /* CollectionTableViewCell.swift */; };
 		40DF07AD28EC82B00043224A /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07AC28EC82B00043224A /* TableCollectionViewCell.swift */; };
+		40E1184F292F6FA00056EE46 /* MyColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1184E292F6FA00056EE46 /* MyColorPicker.swift */; };
 		40E1EC3A29028397006789D2 /* FireStoreCreatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1EC3929028397006789D2 /* FireStoreCreatVC.swift */; };
 		40E1EC3C290283B8006789D2 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1EC3B290283B8006789D2 /* Ingredient.swift */; };
 		40F4BB91291EAA6200965E1B /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 40F4BB90291EAA6200965E1B /* PopupView */; };
@@ -123,6 +124,7 @@
 		40DF07A728EC81B40043224A /* NotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyVC.swift; sourceTree = "<group>"; };
 		40DF07AA28EC82620043224A /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		40DF07AC28EC82B00043224A /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
+		40E1184E292F6FA00056EE46 /* MyColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColorPicker.swift; sourceTree = "<group>"; };
 		40E1EC3929028397006789D2 /* FireStoreCreatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreCreatVC.swift; sourceTree = "<group>"; };
 		40E1EC3B290283B8006789D2 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				40DBC932291567AE00EC71E0 /* SwiftUIViewtest.swift */,
+				40E1184E292F6FA00056EE46 /* MyColorPicker.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				401AF622292BDDFA0050F3D3 /* NotesAddenVC.swift in Sources */,
 				4071F3DA292B91A300C256BF /* FUserDefaultsPropertyWrapper.swift in Sources */,
 				4071F3D1292B8C8B00C256BF /* SettingsView.swift in Sources */,
+				40E1184F292F6FA00056EE46 /* MyColorPicker.swift in Sources */,
 				40DF07A628EC592C0043224A /* DedailNotizyVC.swift in Sources */,
 				4098AB562919394300EBBD90 /* PageViewController.swift in Sources */,
 				4071F3DC292B91E400C256BF /* FontSizeView.swift in Sources */,

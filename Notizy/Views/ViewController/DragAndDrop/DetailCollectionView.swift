@@ -13,11 +13,17 @@ class DetailCollectionView: UIViewController {
     
     @IBOutlet weak var notesDetail: UILabel!
     
+    
+    @IBOutlet weak var notesTXTView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         notesDetail.text = currentNotiz.title
         notesDetail.sizeToFit()
+        notesTXTView.text = currentNotiz.text
+        notesTXTView.sizeToFit()
+        
     }
 
     
