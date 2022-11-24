@@ -34,6 +34,6 @@ class ModernCellNotizyVC: UIViewController, UITableViewDelegate, UITableViewData
     
         return cell
         
-        
     }
+    
 }
