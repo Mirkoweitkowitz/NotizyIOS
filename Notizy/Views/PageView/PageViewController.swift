@@ -27,6 +27,6 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
 
 //struct PageViewController_Previews: PreviewProvider {
 //    static var previews: some View {
-//        PageViewController()
+//        PageViewController(pages: [0])
 //    }
 //}

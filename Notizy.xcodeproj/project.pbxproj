@@ -52,7 +52,7 @@
 		4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098AB5A29193BF100EBBD90 /* CoreDaten.swift */; };
 		409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AE24428FD914D00617481 /* NotizyCVC.swift */; };
 		40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40BB970228DD99DE000ECDCE /* Notizy.xcdatamodeld */; };
-		40C40ACC291A878E00F651F9 /* FirebaseStorageUploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C40ACB291A878E00F651F9 /* FirebaseStorageUploadVC.swift */; };
+		40C40ACC291A878E00F651F9 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C40ACB291A878E00F651F9 /* UserImageView.swift */; };
 		40D23BE8290165DA0056B3AF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23BE7290165DA0056B3AF /* SignUpVC.swift */; };
 		40D341EC28CB5C420044B470 /* TableNotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341EB28CB5C420044B470 /* TableNotizyVC.swift */; };
 		40D341F028CB64700044B470 /* SaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D341EF28CB64700044B470 /* SaveVC.swift */; };
@@ -102,7 +102,7 @@
 		409AE24428FD914D00617481 /* NotizyCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizyCVC.swift; sourceTree = "<group>"; };
 		40A84EEA2912A36100FB1FFF /* Treffen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Treffen.mp4; sourceTree = "<group>"; };
 		40BB970328DD99DE000ECDCE /* Notizy.Model.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = Notizy.Model.xcdatamodel; sourceTree = "<group>"; };
-		40C40ACB291A878E00F651F9 /* FirebaseStorageUploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageUploadVC.swift; sourceTree = "<group>"; };
+		40C40ACB291A878E00F651F9 /* UserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
 		40D23BE7290165DA0056B3AF /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		40D341EB28CB5C420044B470 /* TableNotizyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNotizyVC.swift; sourceTree = "<group>"; };
 		40D341EF28CB64700044B470 /* SaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVC.swift; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 		40C40ACD291A8D2F00F651F9 /* FirebaseStorage */ = {
 			isa = PBXGroup;
 			children = (
-				40C40ACB291A878E00F651F9 /* FirebaseStorageUploadVC.swift */,
+				40C40ACB291A878E00F651F9 /* UserImageView.swift */,
 			);
 			path = FirebaseStorage;
 			sourceTree = "<group>";
@@ -472,7 +472,7 @@
 				40DF07AB28EC82620043224A /* CollectionTableViewCell.swift in Sources */,
 				4054F05228C9CB5100710F30 /* SceneDelegate.swift in Sources */,
 				400DB33528FE9AFF00401566 /* LoginVC.swift in Sources */,
-				40C40ACC291A878E00F651F9 /* FirebaseStorageUploadVC.swift in Sources */,
+				40C40ACC291A878E00F651F9 /* UserImageView.swift in Sources */,
 				4098AB5B29193BF100EBBD90 /* CoreDaten.swift in Sources */,
 				40D341F228CB64800044B470 /* EditVC.swift in Sources */,
 				409AE24528FD914D00617481 /* NotizyCVC.swift in Sources */,
