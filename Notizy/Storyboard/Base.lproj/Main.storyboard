@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-BN-hVb">
-                                <rect key="frame" x="-4" y="0.0" width="377" height="44"/>
+                                <rect key="frame" x="-6" y="0.0" width="379" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="x8V-N1-BM0">
@@ -503,7 +503,7 @@
         <!--Item-->
         <scene sceneID="CJh-0a-7Pq">
             <objects>
-                <viewController id="7Ik-Ss-gJW" customClass="FirebaseStorageUploadVC" customModule="Notizy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Ik-Ss-gJW" customClass="UserImageView" customModule="Notizy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wuk-QB-yXG"/>
                         <viewControllerLayoutGuide type="bottom" id="Dvn-YM-cPN"/>
@@ -512,7 +512,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bowser_Stock_Art_2021" translatesAutoresizingMaskIntoConstraints="NO" id="Kny-eC-1p4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="Kny-eC-1p4">
                                 <rect key="frame" x="62" y="86" width="251" height="168"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="251" id="AmG-4I-DUv"/>
@@ -535,9 +535,17 @@
                                     <constraint firstAttribute="height" constant="35" id="lNd-GA-qSd"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Upload beautiful Bowser"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Upload image"/>
                                 <connections>
                                     <action selector="uploadImgBtnTapped:" destination="7Ik-Ss-gJW" eventType="touchUpInside" id="zkG-kG-Mto"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxc-Zg-7U6">
+                                <rect key="frame" x="272" y="238" width="56" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="camera.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="cameraBTN:" destination="7Ik-Ss-gJW" eventType="touchUpInside" id="1CW-i7-wv0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -549,7 +557,10 @@
                             <constraint firstItem="Kny-eC-1p4" firstAttribute="top" secondItem="Wuk-QB-yXG" secondAttribute="bottom" constant="39" id="FNR-Jo-OuV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vNj-hv-5sK" secondAttribute="trailing" constant="46" id="Iwf-Q2-N6K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kny-eC-1p4" secondAttribute="trailing" constant="46" id="LtT-aQ-EM1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bxc-Zg-7U6" secondAttribute="trailing" constant="31" id="SiX-Q5-KoY"/>
                             <constraint firstItem="Kny-eC-1p4" firstAttribute="leading" secondItem="nfa-JU-H1M" secondAttribute="leadingMargin" constant="46" id="fDj-Fa-197"/>
+                            <constraint firstItem="72t-d4-dfw" firstAttribute="top" secondItem="Bxc-Zg-7U6" secondAttribute="bottom" constant="116" id="heY-sK-MVU"/>
+                            <constraint firstItem="Bxc-Zg-7U6" firstAttribute="top" secondItem="Wuk-QB-yXG" secondAttribute="bottom" constant="191" id="jiw-Eu-440"/>
                             <constraint firstItem="72t-d4-dfw" firstAttribute="leading" secondItem="nfa-JU-H1M" secondAttribute="leadingMargin" constant="46" id="rKD-kY-Gku"/>
                             <constraint firstItem="vNj-hv-5sK" firstAttribute="top" secondItem="72t-d4-dfw" secondAttribute="bottom" constant="112" id="xKQ-ln-pX7"/>
                         </constraints>
@@ -1657,7 +1668,6 @@
         <image name="Bildschirmfoto 2022-08-19 um 10.46.36" width="1074" height="1162"/>
         <image name="Bildschirmfoto 2022-08-19 um 10.46.54" width="1294" height="1342"/>
         <image name="Bildschirmfoto 2022-09-16 um 10.35.55" width="379" height="508"/>
-        <image name="Bowser_Stock_Art_2021" width="315" height="315"/>
         <image name="Notizy" width="1952" height="2920"/>
         <image name="NotizyBackground" width="1440" height="2408"/>
         <image name="applelogo" catalog="system" width="105" height="128"/>
@@ -1666,6 +1676,7 @@
         <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
         <image name="background" width="227" height="340"/>
         <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.right.2" catalog="system" width="128" height="108"/>
         <image name="defaultImage" width="1524" height="976"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
