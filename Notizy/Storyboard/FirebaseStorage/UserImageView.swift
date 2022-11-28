@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseStorage
 import FirebaseFirestore
+import FirebaseAuth
 
 class UserImageView: UIViewController, UITextViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -104,8 +105,9 @@ class UserImageView: UIViewController, UITextViewDelegate, UITextFieldDelegate, 
         
         guard (imgView.image?.jpegData(compressionQuality: 1.0)) != nil else { return }
         
-        //         File Path festlegen
-        //        let path = "images/\(nameThisImgTF.text!).png"
+//                 File Path festlegen
+//                let path = "images/\(nameThisImgTF.text!).png"
+        
         let path = "images/\(UUID().uuidString).png"
         let fileRef = storageRef.child(path)
         
