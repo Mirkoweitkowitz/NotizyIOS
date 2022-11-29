@@ -12,6 +12,7 @@
 		400DB33528FE9AFF00401566 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400DB33428FE9AFF00401566 /* LoginVC.swift */; };
 		4010B166292CE6B200C39A8A /* AnimateText in Frameworks */ = {isa = PBXBuildFile; productRef = 4010B165292CE6B200C39A8A /* AnimateText */; };
 		401AF622292BDDFA0050F3D3 /* NotesAddenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401AF621292BDDFA0050F3D3 /* NotesAddenVC.swift */; };
+		40221BEF29364E1B00301834 /* NotizenGeschichteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40221BEE29364E1B00301834 /* NotizenGeschichteVC.swift */; };
 		402521E629012F7200753BEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 402521E529012F7200753BEB /* GoogleService-Info.plist */; };
 		402521E92901319D00753BEB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 402521E82901319D00753BEB /* FirebaseAnalytics */; };
 		402521EB2901319D00753BEB /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 402521EA2901319D00753BEB /* FirebaseAnalyticsSwift */; };
@@ -74,6 +75,7 @@
 		4006EB1628EEFCAB00BEB33F /* Matrix.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Matrix.mp4; sourceTree = "<group>"; };
 		400DB33428FE9AFF00401566 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		401AF621292BDDFA0050F3D3 /* NotesAddenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAddenVC.swift; sourceTree = "<group>"; };
+		40221BEE29364E1B00301834 /* NotizenGeschichteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizenGeschichteVC.swift; sourceTree = "<group>"; };
 		402521E529012F7200753BEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		402DB4BD292E681200ED86E8 /* NotizenCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotizenCVC.swift; sourceTree = "<group>"; };
 		403E310D291E5830005A7A62 /* ScanCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCVC.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				40D341F128CB64800044B470 /* EditVC.swift */,
 				40D341EF28CB64700044B470 /* SaveVC.swift */,
 				40D341F328CB75BE0044B470 /* ContactTVC.swift */,
+				40221BEE29364E1B00301834 /* NotizenGeschichteVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				4006EB1528EEDDC700BEB33F /* NotizyCollectionVC.swift in Sources */,
 				40D341F828CB85760044B470 /* PictureCollectionViewCell.swift in Sources */,
 				40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */,
+				40221BEF29364E1B00301834 /* NotizenGeschichteVC.swift in Sources */,
 				40BB970428DD99DE000ECDCE /* Notizy.xcdatamodeld in Sources */,
 				4071F3D3292B8E4000C256BF /* Settings.swift in Sources */,
 				40D341F628CB85410044B470 /* CollectionViewTaskVC.swift in Sources */,
