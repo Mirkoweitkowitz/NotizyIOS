@@ -105,6 +105,8 @@ class UserImageView: UIViewController, UITextViewDelegate, UITextFieldDelegate, 
         
         guard (imgView.image?.jpegData(compressionQuality: 1.0)) != nil else { return }
         
+       
+        
 //                 File Path festlegen
 //                let path = "images/\(nameThisImgTF.text!).png"
         
@@ -114,7 +116,7 @@ class UserImageView: UIViewController, UITextViewDelegate, UITextFieldDelegate, 
         // Daten hochladen
         let uploadTask = fileRef.putData(imageData) { metadata, error in
             if error == nil {
-                print("test dragon")
+                print("test image")
                 
                 let db = Firestore.firestore()
                 db.collection("images").document().setData([
@@ -126,18 +128,18 @@ class UserImageView: UIViewController, UITextViewDelegate, UITextFieldDelegate, 
             }
             
         }
-        
+        NotificationCenter.default.post(name: NSNotification.Name.init("de.Notizy.UserImageView.userImage"), object: imageData)
     }
-    
+
     
     
     /*
      // MARK: - Navigation
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
+      In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+      Get the new view controller using segue.destination.
+      Pass the selected object to the new view controller.
      }
      */
     
