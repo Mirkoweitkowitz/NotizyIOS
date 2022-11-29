@@ -129,6 +129,8 @@ struct BusinessCard: View {
 struct ContentView: View {
     @State var flipped: Bool = false
     @State var flip: Bool = false
+    let names = ["Thor", "Ted", "Josh", "Mirko"]
+    @State private var searchText = ""
     
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -139,6 +141,12 @@ struct ContentView: View {
     
     
     var body: some View {
+        NavigationView {
+            Text("Searching for \(searchText)")
+                .searchable(text: $searchText)
+                .navigationTitle("Searchable Example")
+        }
+        
         
         ZStack {
             // MARK: - Scrollbare VisitenKarte
@@ -153,9 +161,7 @@ struct ContentView: View {
                                      notes:  contact.notes,
                                      image: contact.image)
                         
-//                        if contact.image != nil{
-//                            imgContact.image = UIImage(data: contact.image!)
-//                        }
+
                         
                     }.listRowBackground(Color.clear)
                         .shadow(color: .gray.opacity(0.8), radius:  20)
