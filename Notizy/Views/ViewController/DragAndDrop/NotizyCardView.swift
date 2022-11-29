@@ -38,7 +38,7 @@ class NotizyCardView: UIViewController {
         cameraButton.layer.shadowOffset = .zero
         cameraButton.layer.shadowOpacity = 1
         
-        let storageRef = Storage.storage().reference(withPath: "images").listAll { data, error  in
+        let _: () = Storage.storage().reference(withPath: "images").listAll { data, error  in
             if data != nil {
                 
                 for item in data!.items{
@@ -49,8 +49,6 @@ class NotizyCardView: UIViewController {
                 
             }
         }
-        
-      
         
         
     }
@@ -66,8 +64,6 @@ class NotizyCardView: UIViewController {
         self.present(scanningDocumentVC, animated: true, completion: nil)
     }
     
-    
-    
 }
 
 extension NotizyCardView:VNDocumentCameraViewControllerDelegate{
@@ -81,18 +77,13 @@ extension NotizyCardView:VNDocumentCameraViewControllerDelegate{
             }
             
             
-            
-            
             // Referenz zum Storage
             let storageRef = Storage.storage().reference()
             
             // Bild in Data umwandeln
             guard let imageData = ScanView.image?.pngData() else { return }
             
-            //guard let imageDataJpeg = imgView.image?.jpegData(compressionQuality: 1.0) else { return }
-            
-            // File Path festlegen
-            //let path = "images/\(nameThisImgTF.text!).png"
+          
             let path = "images/\(UUID().uuidString).png"
             let fileRef = storageRef.child(path)
             
@@ -140,8 +131,7 @@ extension NotizyCardView: UICollectionViewDelegate,UICollectionViewDataSource {
         return cell
     }
     
-    
-    
+
 }
 
 

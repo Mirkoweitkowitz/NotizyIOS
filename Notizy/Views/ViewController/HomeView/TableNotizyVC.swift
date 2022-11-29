@@ -44,9 +44,13 @@ class TableNotizyVC: UIViewController {
         notes.layer.shadowRadius = 20
         notes.imageView?.layer.cornerRadius = 30
        
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(newImageUser(_ :)), name: NSNotification.Name.init("de.Notizy.UserImageView.userImage"), object: nil)
     }
     
+//    MARK: Um den Speicher zu entlasten
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init("de.Notizy.UserImageView.userImage"), object: nil)
+    }
     
     
     @IBAction func touchUpInsideCameraButton(_ sender: Any) {
@@ -60,6 +64,15 @@ class TableNotizyVC: UIViewController {
         self.present(scanningDocumentVC, animated: true, completion: nil)
     }
     
+    @objc func newImageUser(_ notification: NSNotification){
+        
+        if let user = notification.object as? Data {
+            imageHome.image = UIImage(data: user)
+        }else {
+            return
+        }
+        
+    }
     
 }
 
