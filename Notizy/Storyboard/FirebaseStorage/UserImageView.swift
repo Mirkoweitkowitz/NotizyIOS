@@ -108,24 +108,30 @@ class UserImageView: UIViewController, UITextViewDelegate, UITextFieldDelegate, 
        
         
 //                 File Path festlegen
-//                let path = "images/\(nameThisImgTF.text!).png"
+//
         
-        let path = "images/\(UUID().uuidString).png"
-        let fileRef = storageRef.child(path)
+//        let path = "images/\(nameThisImgTF.text!).png"
         
-        // Daten hochladen
-        let uploadTask = fileRef.putData(imageData) { metadata, error in
-            if error == nil {
-                print("test image")
-                
-                let db = Firestore.firestore()
-                db.collection("images").document().setData([
-                    "url": path
+        if let user = Auth.auth().currentUser{
+            let path = "userimages/\(user.uid).png"
+            let fileRef = storageRef.child(path)
+            print("user")
+            
+            // Daten hochladen
+            _ = fileRef.putData(imageData) { metadata, error in
+                if error == nil {
+                    print("test image")
                     
-                ])
-            }else {
-                print(error)
-            }
+                    let db = Firestore.firestore()
+                    db.collection("userimages").document(user.uid).setData([
+                        "imageurl": path
+                        
+                    ])
+                }else {
+                    print(error!)
+                }
+        }
+      
             
         }
         NotificationCenter.default.post(name: NSNotification.Name.init("de.Notizy.UserImageView.userImage"), object: imageData)

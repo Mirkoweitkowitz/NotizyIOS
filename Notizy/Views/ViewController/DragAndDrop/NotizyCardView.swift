@@ -73,7 +73,7 @@ extension NotizyCardView:VNDocumentCameraViewControllerDelegate{
         for pageNumber in 0..<scan.pageCount{
             DispatchQueue.main.async {
                 self.ScanView.image = scan.imageOfPage(at:pageNumber)
-                print(self.ScanView.image)
+                print(self.ScanView.image!)
             }
             
             
@@ -88,7 +88,7 @@ extension NotizyCardView:VNDocumentCameraViewControllerDelegate{
             let fileRef = storageRef.child(path)
             
             // Daten hochladen
-            let uploadTask = fileRef.putData(imageData) { metadata, error in
+            _ = fileRef.putData(imageData) { metadata, error in
                             if error == nil {
                                 print("test dragon")
 
@@ -98,7 +98,7 @@ extension NotizyCardView:VNDocumentCameraViewControllerDelegate{
                     
                     ])
                             }else {
-                                print(error)
+                                print(error!)
                             }
                 
             }

@@ -47,6 +47,27 @@ class TableNotizyVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(newImageUser(_ :)), name: NSNotification.Name.init("de.Notizy.UserImageView.userImage"), object: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let user = Auth.auth().currentUser {
+            let ref = Storage.storage().reference(forURL: "gs://notizy-7ec84.appspot.com/userimages/\(user.uid).png")
+            
+            
+            ref.getData(maxSize: 1 * 5000 * 5000) { result in
+              switch result {
+              case let .success(data):
+                  print("#" + data.description)
+                  DispatchQueue.main.async {
+                      self.imageHome.image = UIImage(data: data)
+                  }
+                 
+              case let .failure(error):
+                print("Error: Image could not download! \(error)")
+              }
+            }
+        }
+        
+    }
+    
 //    MARK: Um den Speicher zu entlasten
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init("de.Notizy.UserImageView.userImage"), object: nil)
@@ -96,11 +117,12 @@ extension TableNotizyVC:VNDocumentCameraViewControllerDelegate{
             
             // File Path festlegen
             //let path = "images/\(nameThisImgTF.text!).png"
+            
             let path = "images/\(UUID().uuidString).png"
             let fileRef = storageRef.child(path)
             
             // Daten hochladen
-            let uploadTask = fileRef.putData(imageData) { metadata, error in
+            _ = fileRef.putData(imageData) { metadata, error in
                             if error == nil {
                                 print("test dragon")
 
@@ -110,7 +132,7 @@ extension TableNotizyVC:VNDocumentCameraViewControllerDelegate{
                     
                     ])
                             }else {
-                                print(error)
+                                print(error!)
                             }
                 
             }
