@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-BN-hVb">
-                                <rect key="frame" x="-7" y="0.0" width="379" height="44"/>
+                                <rect key="frame" x="-8" y="0.0" width="379" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="x8V-N1-BM0">
@@ -456,10 +456,10 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 Notizen dienen dazu, einen Sachverhalt schnell und in Kurzform schriftlich festzuhalten, bevor seine Einzelheiten vom Verfasser vergessen werden. Der Text besitzt mehr Beweiskraft als die bloße Erinnerung. Die Aufzeichnungen dienen deshalb nicht nur dem eigenen Gebrauch, sondern auch als Beweismittel.
 
-Eine Notiz dient auch der Erinnerung an zu erledigende Aufgaben oder Termine, oder hilft, umfangreiche Informationen in kurzer Form festzuhalten. Besonders geeignet für Notizen ist die Stenografie wegen ihrer Kompaktheit und Schnelligkeit (Kurznotiz). Diktiergeräte können auch dazu verwendet werden, um Notizen mündlich festzuhalten.</mutableString>
+Eine Notiz dient auch der Erinnerung an zu erledigende Aufgaben oder Termine, oder hilft, umfangreiche Informationen in kurzer Form festzuhalten. Besonders geeignet für Notizen ist die Stenografie wegen ihrer Kompaktheit und Schnelligkeit (Kurznotiz). Diktiergeräte können auch dazu verwendet werden, um Notizen mündlich festzuhalten.</string>
                                         <attributes>
                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
@@ -485,10 +485,10 @@ Eine Notiz dient auch der Erinnerung an zu erledigende Aufgaben oder Termine, od
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 „Notiz von etwas nehmen“ heißt Erkundigungen über einen Sachverhalt einholen.[2] In Kabale und Liebe von Friedrich Schiller (1784) sagt der Stadtmusikant Miller: „Hab‘ ihm’s Mädel nicht nachgeworfen; wer nimmt Notiz davon?“.[3] August von Platen-Hallermünde schrieb 1848: „Ich habe genialische Notizen von Zeit zu Zeit mir angefertiget“.[4] Die Gebrüder Grimm vermerkten 1889 in ihrem Deutschen Wörterbuch, dass ursprünglich mit „Notiz“ die Kenntnis oder Nachricht bezeichnet wurde.[5]
 
-Der Autor Ludwig Hohl erhob die „Notiz“ zu einer eigenen Literaturgattung. Sein philosophisch-literarisches Hauptwerk Die Notizen umfasst viele hundert notizenhafte Einträge, die immer wieder dieselben Themen umkreisen.</mutableString>
+Der Autor Ludwig Hohl erhob die „Notiz“ zu einer eigenen Literaturgattung. Sein philosophisch-literarisches Hauptwerk Die Notizen umfasst viele hundert notizenhafte Einträge, die immer wieder dieselben Themen umkreisen.</string>
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
