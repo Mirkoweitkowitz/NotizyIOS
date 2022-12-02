@@ -66,6 +66,7 @@
 		40DF07A828EC81B40043224A /* NotizyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07A728EC81B40043224A /* NotizyVC.swift */; };
 		40DF07AB28EC82620043224A /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07AA28EC82620043224A /* CollectionTableViewCell.swift */; };
 		40DF07AD28EC82B00043224A /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF07AC28EC82B00043224A /* TableCollectionViewCell.swift */; };
+		40DF1F87293A1F200071C23C /* ScanbotSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 40DF1F86293A1F200071C23C /* ScanbotSDK */; };
 		40E1184F292F6FA00056EE46 /* MyColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1184E292F6FA00056EE46 /* MyColorPicker.swift */; };
 		40F4BB91291EAA6200965E1B /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 40F4BB90291EAA6200965E1B /* PopupView */; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 				402521ED2901319D00753BEB /* FirebaseAppCheck in Frameworks */,
 				402521F72901319D00753BEB /* FirebaseFunctions in Frameworks */,
 				4010B166292CE6B200C39A8A /* AnimateText in Frameworks */,
+				40DF1F87293A1F200071C23C /* ScanbotSDK in Frameworks */,
 				402521F52901319D00753BEB /* FirebaseFirestoreSwift in Frameworks */,
 				402521E92901319D00753BEB /* FirebaseAnalytics in Frameworks */,
 				402521EF2901319D00753BEB /* FirebaseAuth in Frameworks */,
@@ -381,6 +383,7 @@
 				402CF183291E9A0B0040C35F /* SDWebImageMapKit */,
 				40F4BB90291EAA6200965E1B /* PopupView */,
 				4010B165292CE6B200C39A8A /* AnimateText */,
+				40DF1F86293A1F200071C23C /* ScanbotSDK */,
 			);
 			productName = Notizy;
 			productReference = 4054F04C28C9CB5100710F30 /* Notizy.app */;
@@ -417,6 +420,7 @@
 				402CF180291E9A0B0040C35F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				40F4BB8F291EAA6200965E1B /* XCRemoteSwiftPackageReference "PopupView" */,
 				4010B164292CE6B200C39A8A /* XCRemoteSwiftPackageReference "AnimateText" */,
+				40DF1F85293A1F200071C23C /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */,
 			);
 			productRefGroup = 4054F04D28C9CB5100710F30 /* Products */;
 			projectDirPath = "";
@@ -745,6 +749,14 @@
 				kind = branch;
 			};
 		};
+		40DF1F85293A1F200071C23C /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:doo/scanbot-sdk-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		40F4BB8F291EAA6200965E1B /* XCRemoteSwiftPackageReference "PopupView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/PopupView.git";
@@ -835,6 +847,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 403E3114291E7A14005A7A62 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		40DF1F86293A1F200071C23C /* ScanbotSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40DF1F85293A1F200071C23C /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */;
+			productName = ScanbotSDK;
 		};
 		40F4BB90291EAA6200965E1B /* PopupView */ = {
 			isa = XCSwiftPackageProductDependency;
