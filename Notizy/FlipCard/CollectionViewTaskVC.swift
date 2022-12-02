@@ -138,46 +138,45 @@ struct ContentView: View {
                     [NSSortDescriptor(keyPath: \Contact.name, ascending: true)])
     var contacts: FetchedResults<Contact>
     
-    
-    
-    var body: some View {
-        NavigationView {
-            Text("Searching for \(searchText)")
-                .searchable(text: $searchText)
-                .navigationTitle("Searchable Example")
-        }
-        
-        
-        ZStack {
-            // MARK: - Scrollbare VisitenKarte
-            
-            List {
-                // neuen Kontakte aus CoreData
-                ForEach(contacts) {contact in
-                    Section {
-                        BusinessCard(flipped: false, flip: false, adresse: contact.adress,
-                                     name: contact.name,
-                                     email: contact.email,
-                                     notes:  contact.notes,
-                                     image: contact.image)
-                        
 
-                        
-                    }.listRowBackground(Color.clear)
-                        .shadow(color: .gray.opacity(0.8), radius:  20)
-                }
-            }.scrollContentBackground(.hidden)
-            
-            
-        }.background(Image("notizy.img")
-            .resizable()
-            .aspectRatio(UIImage(named: "notizy.img")!.size, contentMode: .fill)
-            .clipped())
-        .edgesIgnoringSafeArea(.all)
-        
+    var body: some View {
+                    VStack {
+                Text("")
+                    .searchable(text: $searchText)
+                //                .navigationTitle("Searchable Example")
+                
+                
+                ZStack {
+                    // MARK: - Scrollbare VisitenKarte
+                    
+                    List {
+                        // neuen Kontakte aus CoreData
+                        ForEach(contacts) {contact in
+                            Section {
+                                BusinessCard(flipped: false, flip: false, adresse: contact.adress,
+                                             name: contact.name,
+                                             email: contact.email,
+                                             notes:  contact.notes,
+                                             image: contact.image)
+                                
+                                
+                                
+                            }.listRowBackground(Color.clear)
+                                .shadow(color: .gray.opacity(0.8), radius:  20)
+                        }
+                    }.scrollContentBackground(.hidden)
+                    
+                    
+                }.background(Image("notizy.img")
+                    .resizable()
+                    .aspectRatio(UIImage(named: "notizy.img")!.size, contentMode: .fill)
+                    .clipped())
+                .edgesIgnoringSafeArea(.all)
+                
+            }
+        }
     }
 
-}
 
 
 // Referenz zum Core Data Persistent Store / managedObjectContext

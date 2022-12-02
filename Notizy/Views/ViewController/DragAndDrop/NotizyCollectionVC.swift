@@ -157,7 +157,7 @@ class NotizyCollectionVC: UIViewController, UICollectionViewDelegate,UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! NotizenCVC
-        var currentnote = list[indexPath.row]
+        let currentnote = list[indexPath.row]
         cell.backgroundColor = currentnote.color as? UIColor
         cell.notiztitle.text = currentnote.title
         cell.cellCollView.text = currentnote.text

@@ -8,7 +8,6 @@
 import UIKit
 import CoreData
 import FirebaseCore
-import ScanbotSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print(NSHomeDirectory())
-        ScanbotSDK.setLicense("See the license key notes below!")
+//        ScanbotSDK.setLicense("See the license key notes below!")
         FirebaseApp.configure()
         return true
     }

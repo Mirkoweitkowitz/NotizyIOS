@@ -148,7 +148,7 @@ extension ContactTVC {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("Prepare")
-        print(sender)
+        print(sender!)
         print("***************")
         guard let destinationVC = segue.destination as? EditVC else { return }
         guard let selectedContact = sender as? Contact else { return }
@@ -163,7 +163,7 @@ extension ContactTVC {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedContact = meineKontakte![indexPath.row]
         print("****************_----****")
-        print(selectedContact)
+        print(selectedContact!)
         print("****************_----****")
         
         //        TODO: DetailSegue bearbeiten einrichten 27.09.22 muss noch gemacht werden
