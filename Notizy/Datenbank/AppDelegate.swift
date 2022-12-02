@@ -8,16 +8,23 @@
 import UIKit
 import CoreData
 import FirebaseCore
+import ScanbotSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+////        Uncomment this line if you have a license.
+////        ScanbotSDK.setLicense("See the license key notes below!")
+//        return true
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print(NSHomeDirectory())
-        
+        ScanbotSDK.setLicense("See the license key notes below!")
         FirebaseApp.configure()
         return true
     }
